@@ -9,12 +9,15 @@
 5. 科技与 AI
 6. 世界经济
 
-**在线地址：<https://runtaozhuge.github.io/daily-news/>**
+**在线地址：<https://news.maxzhuge.com/>**
+
+（备用：<https://runtaozhuge.github.io/daily-news/>，会 301 跳转到自定义域名）
 
 ## 结构
 
 ```
 .
+├── CNAME               # 自定义域名 news.maxzhuge.com
 ├── index.html          # 首页（自动生成，展示最新一期）
 ├── archive.html        # 归档（自动生成）
 ├── feed.json           # 结构化数据（自动生成）
