@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026年11月11日</title>
+<meta name="dn:date" content="2026-11-11">
+<meta name="dn:issue" content="4">
+<meta name="dn:summary" content="俄美乌谈判与伊朗表态压落油价；Anthropic 启动 IPO；维州偏好票交易改写选情。">
+<style>
+  :root{
+    --ink:#1b1f24; --muted:#5d6773; --faint:#8a939e;
+    --line:#e4e7eb; --bg:#f7f8fa; --card:#ffffff;
+    --blue:#1f4e79; --brick:#9c3b2e; --green:#2f5d50; --gold:#8a6a2f; --violet:#5b4a7a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:32px 18px 56px; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.78; letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+
+  /* ---------- 顶部导航 ---------- */
+  .topnav{font-size:13px;color:var(--faint);margin:0 0 18px;display:flex;gap:8px;align-items:center}
+  .topnav a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+  .topnav .sep{color:#c9ced5}
+
+  /* ---------- 页头 ---------- */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+  .kicker{font-size:12.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+  h1{font-size:29px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- 今日焦点 ---------- */
+  .focus{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);
+    border-radius:3px;padding:16px 20px 10px;margin:0 0 30px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  .focus h2{font-size:14px;margin:0 0 10px;color:var(--brick);letter-spacing:.08em}
+  .focus ol{margin:0;padding-left:20px}
+  .focus li{margin:0 0 8px;font-size:15px}
+  .focus li b{font-weight:650}
+
+  /* ---------- 区块卡片 ---------- */
+  section.card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 22px 14px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);
+    border-left:4px solid var(--line);
+  }
+  section.card.s1{border-left-color:var(--blue)}
+  section.card.s2{border-left-color:var(--brick)}
+  section.card.s3{border-left-color:var(--green)}
+  section.card.s4{border-left-color:var(--gold)}
+  section.card.s5{border-left-color:var(--violet)}
+  section.card.s6{border-left-color:var(--ink)}
+  h2.sec{
+    font-size:18px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;
+    letter-spacing:.01em;
+  }
+  h2.sec .num{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;color:#fff;
+    background:var(--ink);border-radius:2px;padding:2px 7px;position:relative;top:-2px;
+  }
+  h2.sec .en{font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:500}
+
+  ul.news{list-style:none;margin:0;padding:0}
+  ul.news>li{padding:0 0 13px;margin:0 0 13px;border-bottom:1px dashed var(--line)}
+  ul.news>li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:2px}
+  ul.news .lead{font-weight:650;color:var(--ink)}
+  .src{display:block;margin-top:5px;font-size:12.5px;color:var(--faint);line-height:1.6}
+  .src a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 6px;border-radius:2px;
+    vertical-align:1px;margin-left:4px;font-weight:600;border:1px solid;
+  }
+  .tag.ok{color:var(--green);border-color:rgba(47,93,80,.35);background:rgba(47,93,80,.06)}
+  .tag.rumor{color:var(--gold);border-color:rgba(138,106,47,.35);background:rgba(138,106,47,.07)}
+  .tag.tbd{color:var(--faint);border-color:#d5dae1;background:#f4f6f8}
+
+  /* ---------- 政策信号解读 ---------- */
+  .signal{
+    margin:16px 0 4px;padding:14px 18px;background:#faf7f4;
+    border:1px solid #eadfd6;border-left:3px solid var(--brick);border-radius:2px;
+  }
+  .signal h3{font-size:14px;margin:0 0 8px;color:var(--brick);letter-spacing:.05em}
+  .signal p{margin:0 0 9px;font-size:14.5px;color:#33383e}
+  .signal p:last-of-type{margin-bottom:10px}
+  .signal .note{font-size:12px;color:var(--faint);border-top:1px dashed #e0d3c8;padding-top:8px;margin:0}
+  .sig-item{margin:0 0 10px}
+  .sig-item .k{font-weight:650}
+
+  /* ---------- 表格 ---------- */
+  .tbl-wrap{overflow-x:auto;margin:6px 0 4px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  thead th{
+    text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;
+    border-bottom:1.5px solid var(--ink);padding:7px 10px 7px 0;white-space:nowrap;
+  }
+  tbody td{border-bottom:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  td .sub{display:block;font-weight:400;font-size:12.5px;color:var(--faint)}
+
+  /* ---------- 今日关注 ---------- */
+  .watch{background:#fff;border:1px solid var(--line);border-radius:3px;padding:16px 22px 8px;margin:0 0 26px}
+  .watch h2{font-size:15px;margin:0 0 10px;letter-spacing:.06em;color:var(--ink)}
+  .watch ul{margin:0;padding-left:18px}
+  .watch li{margin:0 0 7px;font-size:14.5px}
+
+  footer{border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--faint);line-height:1.7}
+  footer p{margin:0 0 6px}
+
+  @media (max-width:600px){
+    body{padding:20px 12px 40px;font-size:15.5px}
+    h1{font-size:23px}
+    section.card{padding:15px 16px 12px}
+    .focus{padding:14px 16px 8px}
+    .tbl-wrap{margin-left:-4px;margin-right:-4px}
+  }
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    section.card,.focus,.watch{box-shadow:none;break-inside:avoid}
+    a{color:#000;border-bottom:0}
+    .tbl-wrap{overflow:visible}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topnav"><a href="./index.html">← 全部简报</a><span class="sep">·</span><a href="./archive.html">归档</a><span class="sep">·</span><a href="https://github.com/RuntaoZhuge/daily-news" target="_blank" rel="noopener">GitHub</a></nav>
+
+  <header class="top">
+    <div class="kicker">Daily Briefing · Melbourne</div>
+    <h1>世界、中国、澳洲与墨尔本：每日简报</h1>
+    <div class="meta">
+      <span>2026 年 11 月 11 日 · 星期三</span>
+      <span>第 4 期</span>
+      <span>生成于 09:40 AEDT</span>
+      <span>覆盖 11 月 10—11 日</span>
+    </div>
+  </header>
+
+  <div class="focus">
+    <h2>今日焦点</h2>
+    <ol>
+      <li><b>两条战线同时出现外交窗口</b>：俄美乌三方谈判重启，伊朗最高领袖要求结束对美"不战不和"，油价应声大跌。</li>
+      <li><b>Anthropic 正式启动 IPO</b>：发行 8.25 亿股、定价 70–78 美元，募资上限 643.5 亿美元，七大科技巨头认购 260 亿。</li>
+      <li><b>维州自由党把 One Nation 排在工党之前</b>，偏好票交易可能改写选情，Prahran 成焦点。</li>
+    </ol>
+  </div>
+
+  <!-- 1 世界 -->
+  <section class="card s1">
+    <h2 class="sec"><span class="num">01</span>世界主要事件<span class="en">WORLD</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">俄美乌三方谈判重启。</span>
+        <span class="tag ok">已确认</span>
+        央视《新闻联播》报道"围绕乌克兰问题，俄美乌新一轮三方谈判举行"。这是自冲突僵持以来少见的三方同场，法国此前已表态欧洲将参与谈判进程。谈判能否触及停火与安全保障，是后续关键。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社 / 央视《新闻联播》</a></span>
+      </li>
+      <li>
+        <span class="lead">伊朗最高领袖要求结束对美"不战不和"状态。</span>
+        <span class="tag ok">已确认</span>
+        《新闻联播》同日报道该表态。但同一天，伊朗革命卫队称两艘"违规"油轮在霍尔木兹"未授权"航道发生爆炸：一艘触雷，另一艘在美军战机支援下试图偷越时起火。一边释放谈判信号，一边维持军事压力，是典型的双轨策略。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a>｜<a href="https://english.news.cn/20261110/5989d72ebcba45e1b11074ff1ec50940/c.html" target="_blank" rel="noopener">Xinhua</a></span>
+      </li>
+      <li>
+        <span class="lead">油价大跌，市场把"外交窗口"计入价格。</span>
+        <span class="tag ok">已确认</span>
+        上周还因三艘油轮触雷而重燃的地缘溢价，在谈判与表态的新闻后迅速回吐。ASX 200 当日上涨 1.10%，逼近历史纪录，金矿、矿业与银行领涨——这是"风险偏好回升＋通胀压力缓解"的典型组合。
+        <span class="src">来源：<a href="https://uk.investing.com/news/stock-market-news/australia-shares-higher-at-close-of-trade-spasx-200-up-110-4970325" target="_blank" rel="noopener">Investing.com</a>｜<a href="https://www.marketindex.com.au/news/evening-wrap-asx-200-rockets-towards-record-as-oil-price-tumbles-gold-mining" target="_blank" rel="noopener">MarketIndex</a></span>
+      </li>
+      <li>
+        <span class="lead">美国共和党议员对防长发起弹劾。</span>
+        <span class="tag ok">已确认</span>
+        中期选举大败之后，共和党内部先出现的是清算而非团结。弹劾在共和党控制参院的情况下难以成功，但会持续消耗防务与外交议程的注意力。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社 / 央视《新闻联播》</a></span>
+      </li>
+      <li>
+        <span class="lead">COP31 开幕，"中国角"举行首日活动。</span>
+        <span class="tag ok">已确认</span>
+        气候谈判进入新一轮周期。对中国而言，这是"十五五"绿色转型对外叙事的重要场合；对澳洲而言，则是矿业出口与气候承诺之间的老问题。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 中国 -->
+  <section class="card s2">
+    <h2 class="sec"><span class="num">02</span>中国政治<span class="en">CHINA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">前 10 个月外贸同比增长 20%。</span>
+        <span class="tag ok">官方发布</span>
+        在全球贸易摩擦加剧的背景下，这个增速相当强劲，说明出口链条仍在扩张。但要注意：这是同比数据，且受基数与抢出口影响，单月波动可能很大。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社 / 央视《新闻联播》</a></span>
+      </li>
+      <li>
+        <span class="lead">二手房交易前 10 个月同比增长 11.4%。</span>
+        <span class="tag ok">官方发布</span>
+        与房价下跌并存，这是"以价换量"的典型形态：成交回暖靠的是业主让价，而非需求转强。对中介、家装、家电是利好，对新房开发商仍偏负面。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+      <li>
+        <span class="lead">习近平《论减贫脱贫》出版发行，"十五五"民生举措公布。</span>
+        <span class="tag ok">官方发布</span>
+        减贫叙事在"十五五"开局前重新被强调，配合"保障和改善民生"的多项举措，指向的是内需与消费的底层支撑——收入分配与社会保障。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+      <li>
+        <span class="lead">赵乐际会见哥伦比亚多党干部考察团，王沪宁会见老挝建国阵线副主席。</span>
+        <span class="tag ok">官方发布</span>
+        两场会见都是党际外交，对象分别是拉美与东南亚。同期中国海警舰艇首次访问马来西亚，周边与全球南方的"存在感经营"同步推进。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+      <li>
+        <span class="lead">创新药"安全合理配备使用"政策落地，储蓄国债开售。</span>
+        <span class="tag ok">官方发布</span>
+        前者是医保控费与创新支持的平衡术，后者是居民资产配置从存款向国债迁移的又一渠道。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+    </ul>
+
+    <div class="signal">
+      <h3>政策信号解读</h3>
+      <div class="sig-item">
+        <span class="k">① "外贸 +20%／CPI +0.7%" 的剪刀差是关键。</span>
+        外需强、内需弱，增长对出口的依赖度上升。这意味着明年的最大风险不是通胀，而是贸易摩擦与外部需求回落；对澳洲的直接含义是：中国对铁矿石、煤炭、LNG 的需求取决于其出口链与基建，而非居民消费。
+      </div>
+      <div class="sig-item">
+        <span class="k">② 二手房 +11.4% 是"量的回暖"，不是"价的转折"。</span>
+        成交量先行、价格仍在下行，是典型的以价换量。政策层面更可能继续放松交易环节（税费、限购），而不是重启刺激。对澳洲而言，中国房地产的"弱企稳"意味着钢材需求难有大反弹。
+      </div>
+      <div class="sig-item">
+        <span class="k">③ 减贫与民生叙事回归，指向消费的"收入端"。</span>
+        《论减贫脱贫》出版加上"十五五"民生举措，说明政策思路正从"发券促消费"转向"提高中低收入群体保障"。这类政策见效慢，但对消费的持续性更强。
+      </div>
+      <div class="sig-item">
+        <span class="k">④ 外交上的"劝和"正在变成资产。</span>
+        在伊朗问题上表态"通过对话谈判化解争端"，同时与俄美乌谈判同步，北京正在把自己塑造成可被各方接受的斡旋方。这种角色不产生直接经济收益，但在能源与航运风险上升时，是重要的议价筹码。
+      </div>
+      <p class="note">以上为分析判断，非官方表述；①②③基于已发布数据，④为观察推论。</p>
+    </div>
+  </section>
+
+  <!-- 3 澳洲 -->
+  <section class="card s3">
+    <h2 class="sec"><span class="num">03</span>澳洲新闻<span class="en">AUSTRALIA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">维州自由党决定在偏好票上把 One Nation 排在工党之前。</span>
+        <span class="tag ok">已确认</span>
+        ABC 选情直播确认这一安排。偏好票在维州的分配制度下足以改变边缘选区结果，这也是自由党在民调落后的情况下，试图把右翼选票"串起来"的现实选择。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">绿党抨击工党在 Prahran 的偏好安排"不可原谅"。</span>
+        <span class="tag ok">已确认</span>
+        绿党警告，工党在该选区的偏好指向可能让"自由党—One Nation 政府"成为现实。内城选区的偏好博弈，往往比政策承诺更能决定谁进议会。
+        <span class="src">来源：<a href="https://www.theguardian.com/australia-news/2026/nov/11/labor-decision-greens-preference-one-nation-battleground-seat-prahran-ntwnfb" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">One Nation 维州候选人因希特勒相关言论被撤换。</span>
+        <span class="tag ok">已确认</span>
+        事件发生在偏好票交易的同一天，对 One Nation 的"主流化"叙事是直接打击，也让自由党的偏好决定更难解释。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">这场偏好交易可能成为全国范本。</span>
+        <span class="tag tbd">分析</span>
+        《堪培拉时报》指出，若维州模式奏效，自由党—One Nation 的偏好合作可能在联邦层面复制。对工党而言，真正的威胁不是首选票流失，而是偏好链条被对手打通。
+        <span class="src">判断依据：<a href="https://www.canberratimes.com.au/story/9388668/one-nation-preference-deal-could-set-national-precedent/" target="_blank" rel="noopener">The Canberra Times</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 墨尔本 -->
+  <section class="card s4">
+    <h2 class="sec"><span class="num">04</span>墨尔本新闻<span class="en">MELBOURNE</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">Prahran：内城选区的三方绞杀。</span>
+        <span class="tag ok">已确认</span>
+        Prahran 是绿党与工党争夺内城进步选票的经典战场，自由党在此的偏好安排会直接决定谁能笑到最后。绿党的"不可原谅"表态，说明这一安排已被视为对进步阵营的背刺。
+        <span class="src">来源：<a href="https://www.theguardian.com/australia-news/2026/nov/11/labor-decision-greens-preference-one-nation-battleground-seat-prahran-ntwnfb" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">偏好票交易让"如何投票卡"成为本周最大变量。</span>
+        <span class="tag ok">已确认</span>
+        在维州的完全偏好投票制下，候选人排名与政党推荐卡会显著影响最终结果。未来两周，各党在墨尔本都会区边缘席位的谈判会密集进行。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">天气：多云转阴，18°C / 9°C。</span>
+        <span class="tag ok">已确认</span>
+        今天白天多云、最高 18°C，夜间转阴、最低 9°C，风力 3—4 级转弱；明天回升至 21°C。早晚温差大，通勤注意添衣。
+        <span class="src">来源：<a href="https://www.weather.com.cn/weather1d/601060101.shtml" target="_blank" rel="noopener">中国天气网</a></span>
+      </li>
+      <li>
+        <span class="lead">选战进入最后两周，治安与生活成本仍是主线。</span>
+        <span class="tag ok">已确认</span>
+        上周的车站关闭与警力承诺争议仍在发酵，本周叠加偏好票风波，墨尔本郊区选民的注意力被同时拉向"安全"与"物价"两个方向。
+        <span class="src">来源：<a href="https://www.bunburymail.com.au/story/9387844/anger-over-station-closures-as-leaders-pledge-more-cops/" target="_blank" rel="noopener">Bunbury Mail</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 科技 -->
+  <section class="card s5">
+    <h2 class="sec"><span class="num">05</span>科技与 AI<span class="en">TECH</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">Anthropic 正式启动 IPO：最高募资 643.5 亿美元。</span>
+        <span class="tag ok">已确认</span>
+        计划在纳斯达克上市，代码"ANT"，发行 8.25 亿股（公司出售 8.01 亿股 A 类股，老股东出售约 2364.86 万股），定价区间每股 70–78 美元；按上限计算募资约 643.5 亿美元，另授予承销商 30 天超额配售权（至多 1.2375 亿股）。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0EKQD00" target="_blank" rel="noopener">中新经纬</a></span>
+      </li>
+      <li>
+        <span class="lead">七大科技巨头以 IPO 价格认购 260 亿美元。</span>
+        <span class="tag ok">已确认</span>
+        Alphabet、Nvidia、AMD、Broadcom、Micron、Microsoft 与台积电同意参与 N 类普通股私募配售。这既是"战略背书"，也意味着客户与股东身份高度重合——AI 产业链的循环投资结构进一步固化。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0EKQD00" target="_blank" rel="noopener">中新经纬 / 路透社</a></span>
+      </li>
+      <li>
+        <span class="lead">年化营收 810 亿美元，估值预期锁定 1.5 万亿。</span>
+        <span class="tag ok">已确认</span>
+        截至 10 月 31 日年化营收约 810 亿美元，比 9 月底增加 100 亿。市场此前预期的 2 万亿美元估值，在 AI 板块回调后锁定在 1.5 万亿上限——"增长故事"仍在，但溢价被压缩了。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0EKQD00" target="_blank" rel="noopener">中新经纬</a></span>
+      </li>
+      <li>
+        <span class="lead">上周的模型发布潮仍在消化：Mythos 5.2 / Fable 5.2 与 Mistral Large 4。</span>
+        <span class="tag ok">已确认</span>
+        Anthropic 称 90% 代码由 Claude 生成，定价降至每百万输入 8 美元；Mistral 把 1 万亿参数模型开源（MaaS 需单独授权）。开源与闭源的路线分歧，正在 IPO 定价里被重新估值。
+        <span class="src">来源：<a href="https://www.constellationr.com/insights/news/anthropic-releases-mythos-52-fable-52" target="_blank" rel="noopener">Constellation Research</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6 经济 -->
+  <section class="card s6">
+    <h2 class="sec"><span class="num">06</span>世界经济<span class="en">ECONOMY</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">ASX 200 涨 1.10%，逼近历史纪录。</span>
+        <span class="tag ok">已确认</span>
+        油价大跌缓解通胀担忧，金矿、矿业与银行领涨。资源股与金融股同时走强，说明资金在交易"软着陆＋中国需求不崩"的组合。
+        <span class="src">来源：<a href="https://uk.investing.com/news/stock-market-news/australia-shares-higher-at-close-of-trade-spasx-200-up-110-4970325" target="_blank" rel="noopener">Investing.com</a>｜<a href="https://www.marketindex.com.au/news/evening-wrap-asx-200-rockets-towards-record-as-oil-price-tumbles-gold-mining" target="_blank" rel="noopener">MarketIndex</a></span>
+      </li>
+      <li>
+        <span class="lead">油价：外交信号压过供给风险。</span>
+        <span class="tag ok">已确认</span>
+        俄美乌谈判与伊朗"结束不战不和"的表态，让市场暂时忽略霍尔木兹的实质中断风险。若谈判破裂，溢价会以更快的速度回补——这是当前最不对称的风险。
+        <span class="src">来源：<a href="https://www.marketindex.com.au/news/evening-wrap-asx-200-rockets-towards-record-as-oil-price-tumbles-gold-mining" target="_blank" rel="noopener">MarketIndex</a></span>
+      </li>
+      <li>
+        <span class="lead">中国外贸 +20% 与 CPI +0.7%，对澳洲是"一好一坏"。</span>
+        <span class="tag ok">已确认</span>
+        出口强意味着工业品与能源需求有支撑；内需弱意味着消费类大宗（如牛肉、葡萄酒、教育旅游）恢复偏慢。澳元的方向，取决于这两股力量的相对强弱。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0DKZI00" target="_blank" rel="noopener">财联社</a></span>
+      </li>
+      <li>
+        <span class="lead">IPO 市场重启：Anthropic 是今年最大的风险偏好试金石。</span>
+        <span class="tag ok">已确认</span>
+        643.5 亿美元的募资规模，将吸走大量机构流动性。若定价与首日表现强劲，会带动整个 AI 板块估值修复；若破发，则可能触发新一轮去杠杆。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261110A0EKQD00" target="_blank" rel="noopener">中新经纬</a></span>
+      </li>
+    </ul>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>最新 / 方向</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ASX 200</td>
+            <td class="num">+1.10%</td>
+            <td>逼近历史纪录<span class="sub">金矿、矿业、银行领涨</span></td>
+          </tr>
+          <tr>
+            <td>国际油价</td>
+            <td class="num">大幅下跌</td>
+            <td>外交信号压过供给风险<span class="sub">霍尔木兹实质风险仍在</span></td>
+          </tr>
+          <tr>
+            <td>中国外贸（前 10 月）</td>
+            <td class="num">+20%</td>
+            <td>同比，出口链仍强<span class="sub">与 CPI +0.7% 形成剪刀差</span></td>
+          </tr>
+          <tr>
+            <td>中国二手房交易</td>
+            <td class="num">+11.4%</td>
+            <td>前 10 个月同比<span class="sub">以价换量，价格仍在下行</span></td>
+          </tr>
+          <tr>
+            <td>Anthropic IPO</td>
+            <td class="num">643.5 亿美元</td>
+            <td>募资上限，8.25 亿股<span class="sub">定价区间 70–78 美元</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="watch">
+    <h2>今日关注</h2>
+    <ul>
+      <li>Anthropic 定价与挂牌首日表现（代码 ANT），以及是否触发 AI 板块重估。</li>
+      <li>俄美乌三方谈判的实质进展；伊朗是否把"结束不战不和"变成具体行动。</li>
+      <li>维州偏好票风波：自由党—One Nation 安排是否引发更多候选人争议。</li>
+      <li>中国 10 月社融与信贷数据，是判断"宽信用"是否见效的关键。</li>
+      <li>COP31 首周进展，以及澳洲在气候融资上的表态。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>本期基于公开报道整理，链接指向原始来源。标注“传闻 / 未官宣”的信息未经官方确认，“待确认”表示数字或细节尚缺一手来源。</p>
+    <p>中国政治板块的“政策信号解读”为分析判断，不代表官方立场。本简报仅供信息参考，不构成投资建议。</p>
+    <p>生成时间：2026-11-11 09:40 AEDT · 覆盖 11 月 10—11 日 · 第 4 期</p>
+    <p style="margin-top:10px"><a href="./index.html">← 返回全部简报</a> · <a href="./archive.html">查看归档</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
