@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026年11月12日</title>
+<meta name="dn:date" content="2026-11-12">
+<meta name="dn:issue" content="5">
+<meta name="dn:summary" content="中美确认互撑 2026 APEC 与 G20；中国前 10 月外贸 +20%；美股半导体大反弹。">
+<style>
+  :root{
+    --ink:#1b1f24; --muted:#5d6773; --faint:#8a939e;
+    --line:#e4e7eb; --bg:#f7f8fa; --card:#ffffff;
+    --blue:#1f4e79; --brick:#9c3b2e; --green:#2f5d50; --gold:#8a6a2f; --violet:#5b4a7a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:32px 18px 56px; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.78; letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+
+  /* ---------- 顶部导航 ---------- */
+  .topnav{font-size:13px;color:var(--faint);margin:0 0 18px;display:flex;gap:8px;align-items:center}
+  .topnav a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+  .topnav .sep{color:#c9ced5}
+
+  /* ---------- 页头 ---------- */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+  .kicker{font-size:12.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+  h1{font-size:29px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- 今日焦点 ---------- */
+  .focus{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);
+    border-radius:3px;padding:16px 20px 10px;margin:0 0 30px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  .focus h2{font-size:14px;margin:0 0 10px;color:var(--brick);letter-spacing:.08em}
+  .focus ol{margin:0;padding-left:20px}
+  .focus li{margin:0 0 8px;font-size:15px}
+  .focus li b{font-weight:650}
+
+  /* ---------- 区块卡片 ---------- */
+  section.card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 22px 14px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);
+    border-left:4px solid var(--line);
+  }
+  section.card.s1{border-left-color:var(--blue)}
+  section.card.s2{border-left-color:var(--brick)}
+  section.card.s3{border-left-color:var(--green)}
+  section.card.s4{border-left-color:var(--gold)}
+  section.card.s5{border-left-color:var(--violet)}
+  section.card.s6{border-left-color:var(--ink)}
+  h2.sec{
+    font-size:18px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;
+    letter-spacing:.01em;
+  }
+  h2.sec .num{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;color:#fff;
+    background:var(--ink);border-radius:2px;padding:2px 7px;position:relative;top:-2px;
+  }
+  h2.sec .en{font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:500}
+
+  ul.news{list-style:none;margin:0;padding:0}
+  ul.news>li{padding:0 0 13px;margin:0 0 13px;border-bottom:1px dashed var(--line)}
+  ul.news>li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:2px}
+  ul.news .lead{font-weight:650;color:var(--ink)}
+  .src{display:block;margin-top:5px;font-size:12.5px;color:var(--faint);line-height:1.6}
+  .src a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 6px;border-radius:2px;
+    vertical-align:1px;margin-left:4px;font-weight:600;border:1px solid;
+  }
+  .tag.ok{color:var(--green);border-color:rgba(47,93,80,.35);background:rgba(47,93,80,.06)}
+  .tag.rumor{color:var(--gold);border-color:rgba(138,106,47,.35);background:rgba(138,106,47,.07)}
+  .tag.tbd{color:var(--faint);border-color:#d5dae1;background:#f4f6f8}
+
+  /* ---------- 政策信号解读 ---------- */
+  .signal{
+    margin:16px 0 4px;padding:14px 18px;background:#faf7f4;
+    border:1px solid #eadfd6;border-left:3px solid var(--brick);border-radius:2px;
+  }
+  .signal h3{font-size:14px;margin:0 0 8px;color:var(--brick);letter-spacing:.05em}
+  .signal p{margin:0 0 9px;font-size:14.5px;color:#33383e}
+  .signal p:last-of-type{margin-bottom:10px}
+  .signal .note{font-size:12px;color:var(--faint);border-top:1px dashed #e0d3c8;padding-top:8px;margin:0}
+  .sig-item{margin:0 0 10px}
+  .sig-item .k{font-weight:650}
+
+  /* ---------- 表格 ---------- */
+  .tbl-wrap{overflow-x:auto;margin:6px 0 4px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  thead th{
+    text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;
+    border-bottom:1.5px solid var(--ink);padding:7px 10px 7px 0;white-space:nowrap;
+  }
+  tbody td{border-bottom:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  td .sub{display:block;font-weight:400;font-size:12.5px;color:var(--faint)}
+
+  /* ---------- 今日关注 ---------- */
+  .watch{background:#fff;border:1px solid var(--line);border-radius:3px;padding:16px 22px 8px;margin:0 0 26px}
+  .watch h2{font-size:15px;margin:0 0 10px;letter-spacing:.06em;color:var(--ink)}
+  .watch ul{margin:0;padding-left:18px}
+  .watch li{margin:0 0 7px;font-size:14.5px}
+
+  footer{border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--faint);line-height:1.7}
+  footer p{margin:0 0 6px}
+
+  @media (max-width:600px){
+    body{padding:20px 12px 40px;font-size:15.5px}
+    h1{font-size:23px}
+    section.card{padding:15px 16px 12px}
+    .focus{padding:14px 16px 8px}
+    .tbl-wrap{margin-left:-4px;margin-right:-4px}
+  }
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    section.card,.focus,.watch{box-shadow:none;break-inside:avoid}
+    a{color:#000;border-bottom:0}
+    .tbl-wrap{overflow:visible}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topnav"><a href="./index.html">← 全部简报</a><span class="sep">·</span><a href="./archive.html">归档</a><span class="sep">·</span><a href="https://github.com/RuntaoZhuge/daily-news" target="_blank" rel="noopener">GitHub</a></nav>
+
+  <header class="top">
+    <div class="kicker">Daily Briefing · Melbourne</div>
+    <h1>世界、中国、澳洲与墨尔本：每日简报</h1>
+    <div class="meta">
+      <span>2026 年 11 月 12 日 · 星期四</span>
+      <span>第 5 期</span>
+      <span>生成于 08:50 AEDT</span>
+      <span>覆盖 11 月 11—12 日</span>
+    </div>
+  </header>
+
+  <div class="focus">
+    <h2>今日焦点</h2>
+    <ol>
+      <li><b>王毅与鲁比奥通话</b>：中美确认"相互支持"办好 2026 年 APEC 与 G20 两场峰会，元首外交的节奏已排到明年。</li>
+      <li><b>中国前 10 个月货物贸易 44.81 万亿元、同比 +20%</b>，出口仍是增长主引擎。</li>
+      <li><b>美股反弹</b>：纳指涨 1.53%，费城半导体指数开盘涨 4.5%、收复此前 12% 的全部跌幅。</li>
+    </ol>
+  </div>
+
+  <!-- 1 世界 -->
+  <section class="card s1">
+    <h2 class="sec"><span class="num">01</span>世界主要事件<span class="en">WORLD</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">俄乌同意大规模交换战俘，泽连斯基赴都柏林会晤美方。</span>
+        <span class="tag tbd">细节待确认</span>
+        据新闻集团 live 报道，俄乌已同意进行一次大规模战俘交换；乌克兰方面称泽连斯基抵达都柏林，将与美方代表会晤。交换规模与时间表尚未见到官方联合声明，需以后续通报为准。
+        <span class="src">来源：<a href="https://www.weeklytimesnow.com.au/news/world/world-events-live-russia-and-ukraine-agree-to-a-large-exchange-of-prisoners-of-war/live-coverage/26cc458a424840cb83f70ebc0cc43591" target="_blank" rel="noopener">The Weekly Times（标题）</a>｜<a href="https://app.dahecube.com/nweb/pc/spiderdetail.html?spidid=891396" target="_blank" rel="noopener">大河财立方</a></span>
+      </li>
+      <li>
+        <span class="lead">欧盟 2027 年预算达成协议：支付拨款 2115 亿欧元。</span>
+        <span class="tag ok">已确认</span>
+        欧盟理事会与欧洲议会就 2027 年年度预算达成协议，总额 2115 亿欧元，重点保障既定政策项目，并增强应对乌克兰、中东局势等持续性危机的能力。协议还需在 14 天内由双方正式批准。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation" target="_blank" rel="noopener">钛媒体 / 新华社</a></span>
+      </li>
+      <li>
+        <span class="lead">俄罗斯计划 2027 年选定月球核电站方案。</span>
+        <span class="tag ok">已确认</span>
+        俄国家原子能公司 CEO 利哈乔夫表示，将建造功率可达 10 千瓦的月球核电站，计划 2030 年代中期开始运行，目前正在研究 5 种构型，明年必须选定并启动相关工作。月球能源是长期载人基地的前置条件，也是美中俄三方竞争的新赛道。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation" target="_blank" rel="noopener">钛媒体 / 央视新闻</a></span>
+      </li>
+      <li>
+        <span class="lead">霍尔木兹仍在封锁状态，油价却继续回落。</span>
+        <span class="tag ok">已确认</span>
+        伊朗革命卫队 10 日称两艘"违规"油轮在"未授权"航道爆炸，海峡对相关船只持续关闭；但市场在俄美乌谈判与伊朗"结束不战不和"表态后，选择先交易"降温"。这种价格与事实的背离，是最需要警惕的地方。
+        <span class="src">来源：<a href="https://english.news.cn/20261110/5989d72ebcba45e1b11074ff1ec50940/c.html" target="_blank" rel="noopener">Xinhua</a>｜<a href="https://www.marketindex.com.au/news/evening-wrap-asx-200-rockets-towards-record-as-oil-price-tumbles-gold-mining" target="_blank" rel="noopener">MarketIndex</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 中国 -->
+  <section class="card s2">
+    <h2 class="sec"><span class="num">02</span>中国政治<span class="en">CHINA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">王毅同美国国务卿鲁比奥通电话。</span>
+        <span class="tag ok">官方发布</span>
+        11 日通话，双方就中美关系与两国元首互动"深入交换意见"，中方称通话"积极和建设性"。王毅提到习近平 9 月访美"顺利、成功"，两国元首同意丰富中美关系新定位的内涵；中方表示愿同美方"相互支持办好 2026 年亚太经合组织领导人非正式会议和二十国集团领导人峰会"。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201704.html" target="_blank" rel="noopener">央视 / 钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">前 10 个月货物贸易进出口 44.81 万亿元，同比增长 20%。</span>
+        <span class="tag ok">官方发布</span>
+        这是 11 日最硬的一组数据。在全球关税摩擦加剧的年份里保持 20% 的增速，说明出口链的韧性和"抢出口"效应同时存在；单月数据波动会很大，不宜线性外推。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8199371.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">外交部继续就美伊冲突表态"劝和"。</span>
+        <span class="tag ok">官方发布</span>
+        9 日记者会上，针对"美方请求中国帮助结束与伊朗的冲突"，发言人郭嘉昆称美伊战事延宕不符合各方共同利益，相关方应通过对话谈判化解争端。这一表述与王毅—鲁比奥通话形成呼应。
+        <span class="src">来源：<a href="https://m.gmw.cn/2026-11/09/content_1304584295.htm" target="_blank" rel="noopener">中国新闻网 / 光明网</a></span>
+      </li>
+    </ul>
+
+    <div class="signal">
+      <h3>政策信号解读</h3>
+      <div class="sig-item">
+        <span class="k">① "相互支持办会"是一个被低估的框架。</span>
+        2026 年 APEC 由中国主办、G20 由美国主办，双方互相支持对方办会，等于把两场峰会变成了双边关系的"锚点"。这意味着未来一年中美互动会有固定的高层日程，突发事件冲击被缓冲的概率上升。对外资与风险资产是偏正面的结构性信号。
+      </div>
+      <div class="sig-item">
+        <span class="k">② 外贸 +20% 与内需偏弱的组合，短期不会改变。</span>
+        出口强、消费弱意味着政策不会急于收紧，也不会大规模刺激内需，而是继续"以时间换空间"。对澳洲的直接影响是：资源需求看中国出口与基建，而不是中国居民消费。
+      </div>
+      <div class="sig-item">
+        <span class="k">③ "劝和"正在从姿态变成筹码。</span>
+        在伊朗问题上，中国既没有军事介入，也没有制裁工具，但"可被各方接受的对话方"这一身份，在能源与航运风险上升时具有实际价值。它会体现在未来的斡旋、能源采购与通道安全安排中。
+      </div>
+      <p class="note">以上为分析判断，非官方表述；①②含已发布事实，③为观察推论。</p>
+    </div>
+  </section>
+
+  <!-- 3 澳洲 -->
+  <section class="card s3">
+    <h2 class="sec"><span class="num">03</span>澳洲新闻<span class="en">AUSTRALIA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">维州偏好票风波继续发酵。</span>
+        <span class="tag ok">已确认</span>
+        自由党把 One Nation 排在工党之前的决定，与 One Nation 候选人因希特勒言论被撤换在同一周发生，让"偏好合作"的正当性持续受质疑。绿党对工党在 Prahran 安排的批评，使内城选区的三方博弈更加复杂。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-10/victoria-state-election-blog-politics/107357090" target="_blank" rel="noopener">ABC News</a>｜<a href="https://www.theguardian.com/australia-news/2026/nov/11/labor-decision-greens-preference-one-nation-battleground-seat-prahran-ntwnfb" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">总理的"全球性演讲"反响平平，被反对党点名。</span>
+        <span class="tag tbd">细节待确认</span>
+        新闻集团的世界新闻 live 以"PM singled out after global speech falls flat"为标题，但正文无法抓取。可以确认的只有"存在批评"这一事实，演讲内容与批评要点需等原文或官方回应。
+        <span class="src">来源：<a href="https://www.weeklytimesnow.com.au/news/world/world-events-live-russia-and-ukraine-agree-to-a-large-exchange-of-prisoners-of-war/live-coverage/26cc458a424840cb83f70ebc0cc43591" target="_blank" rel="noopener">The Weekly Times（标题）</a></span>
+      </li>
+      <li>
+        <span class="lead">说明：今日联邦与州级新增信息偏少。</span>
+        <span class="tag tbd">信息缺口</span>
+        本期检索期间搜索接口多次超时，澳洲本地报道的可及性受限，因此这一板块只保留已核实的两条，不做补写或推测。明天会优先补上联邦政治与维州选战的最新进展。
+        <span class="src">来源：编辑部说明</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 墨尔本 -->
+  <section class="card s4">
+    <h2 class="sec"><span class="num">04</span>墨尔本新闻<span class="en">MELBOURNE</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">Prahran 与内城选区：偏好票决定胜负。</span>
+        <span class="tag ok">已确认</span>
+        在维州的完全偏好投票制下，绿党与工党的互相排序足以改变结果。Prahran 的争议说明，进步阵营内部的"偏好战"可能比与自由党的对决更能决定谁进议会。
+        <span class="src">来源：<a href="https://www.theguardian.com/australia-news/2026/nov/11/labor-decision-greens-preference-one-nation-battleground-seat-prahran-ntwnfb" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">天气：多云，最高约 21°C。</span>
+        <span class="tag ok">已确认</span>
+        今天多云、气温回升，周六转小雨、最高 17°C、夜间放晴 9°C；周日多云 16°C。周末有雨，户外计划建议留出备选。
+        <span class="src">来源：<a href="https://www.weather.com.cn/weather2d/601060101.shtml" target="_blank" rel="noopener">中国天气网</a></span>
+      </li>
+      <li>
+        <span class="lead">选战进入最后阶段，通勤与治安仍是本地主线。</span>
+        <span class="tag ok">已确认</span>
+        车站关闭的争议尚未平息，两党的警力承诺也在加码。对墨尔本通勤族而言，未来两周的实际体验（班次、治安）可能比任何政策承诺更能影响投票。
+        <span class="src">来源：<a href="https://www.bunburymail.com.au/story/9387844/anger-over-station-closures-as-leaders-pledge-more-cops/" target="_blank" rel="noopener">Bunbury Mail</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 科技 -->
+  <section class="card s5">
+    <h2 class="sec"><span class="num">05</span>科技与 AI<span class="en">TECH</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">半导体大反弹：费半开盘涨 4.5%，收复 12% 的全部跌幅。</span>
+        <span class="tag ok">已确认</span>
+        高盛称半导体板块进入"超卖"区间、英伟达估值有吸引力，英伟达当日涨近 3%。这轮反弹主要由估值修复与空头回补驱动，而非基本面新信息。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201684.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">CoreWeave 三季度营收同比 +168%，股价涨超 16%。</span>
+        <span class="tag ok">已确认</span>
+        公司同时上调全年收入指引，NEBIUS 涨 12%。"新云"厂商的订单仍在扩张，说明 AI 算力需求端没有崩，崩的是估值与融资结构。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201690.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">Anthropic IPO 前夜披露与微软、谷歌的 114 亿美元云协议。</span>
+        <span class="tag ok">已确认</span>
+        协议在招股敏感期披露，作用是向投资者证明算力供给已锁定。结合此前 260 亿美元的战略认购，Anthropic 把"客户—股东—供应商"三重身份绑定在了同一批巨头身上。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201682.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">月球核电站：俄罗斯给出 2027 年选型时间表。</span>
+        <span class="tag ok">已确认</span>
+        10 千瓦级、2030 年代中期运行。月球能源竞赛的技术门槛极高，但它的意义在于为长期驻留提供"不依赖太阳能"的基荷电力。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201677.html" target="_blank" rel="noopener">钛媒体 / 央视新闻</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6 经济 -->
+  <section class="card s6">
+    <h2 class="sec"><span class="num">06</span>世界经济<span class="en">ECONOMY</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">美股三大指数集体上涨，纳指 +1.53%。</span>
+        <span class="tag ok">已确认</span>
+        道指 +0.18%、标普 500 +0.96%、纳指 +1.53%。领涨的是此前跌最狠的 AI 算力链，属于典型的技术性反弹，成交量与广度仍需观察。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201682.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">中国外贸 44.81 万亿元、+20%，是本周最重要的宏观数据之一。</span>
+        <span class="tag ok">已确认</span>
+        出口链的强劲与内需的低迷（CPI +0.7%）并存。对全球通胀而言，中国出口价格是重要的抑制因素；对澳洲而言，则意味着资源需求的支撑仍在。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8199371.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">欧盟 2027 预算 2115 亿欧元，重点仍是危机应对。</span>
+        <span class="tag ok">已确认</span>
+        预算把乌克兰与中东局势列为"持续性危机"，说明欧盟财政的重心正在从绿色转型向安全与防务倾斜。这对欧洲国防与能源板块是中期利好。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201673.html" target="_blank" rel="noopener">钛媒体 / 新华社</a></span>
+      </li>
+      <li>
+        <span class="lead">墨西哥股指创历史新高 72231 点。</span>
+        <span class="tag ok">已确认</span>
+        在美股波动、美元走弱的背景下，部分新兴市场获得资金回流。这是"去美元化交易"的一个小注脚，但不构成趋势判断。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201692.html" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+    </ul>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>最新 / 方向</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>纳斯达克</td>
+            <td class="num">+1.53%</td>
+            <td>11 日收盘<span class="sub">AI 算力链领涨，技术性反弹</span></td>
+          </tr>
+          <tr>
+            <td>费城半导体指数</td>
+            <td class="num">开盘 +4.5%</td>
+            <td>收复 12% 跌幅<span class="sub">高盛称板块"超卖"</span></td>
+          </tr>
+          <tr>
+            <td>中国进出口（前 10 月）</td>
+            <td class="num">44.81 万亿元</td>
+            <td>同比 +20%<span class="sub">出口强、内需弱的剪刀差</span></td>
+          </tr>
+          <tr>
+            <td>欧盟 2027 预算</td>
+            <td class="num">2115 亿欧元</td>
+            <td>理事会与议会达成协议<span class="sub">14 天内正式批准</span></td>
+          </tr>
+          <tr>
+            <td>CoreWeave</td>
+            <td class="num">营收 +168%</td>
+            <td>三季度同比，上调指引<span class="sub">股价单日 +16%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="watch">
+    <h2>今日关注</h2>
+    <ul>
+      <li>俄乌战俘交换的官方细节与时间表；泽连斯基在都柏林与美方的会谈结果。</li>
+      <li>中美后续互动：APEC 与 G20 的筹备安排是否公布。</li>
+      <li>Anthropic 定价结果（代码 ANT），以及 AI 板块能否延续反弹。</li>
+      <li>维州选战：偏好票争议是否影响内城选区民调。</li>
+      <li>霍尔木兹是否出现新的船只事件——油价与事实背离的修正风险。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>本期基于公开报道整理，链接指向原始来源。标注“传闻 / 未官宣”的信息未经官方确认，“待确认”表示数字或细节尚缺一手来源。</p>
+    <p>中国政治板块的“政策信号解读”为分析判断，不代表官方立场。本简报仅供信息参考，不构成投资建议。</p>
+    <p>生成时间：2026-11-12 08:50 AEDT · 覆盖 11 月 11—12 日 · 第 5 期</p>
+    <p style="margin-top:10px"><a href="./index.html">← 返回全部简报</a> · <a href="./archive.html">查看归档</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
