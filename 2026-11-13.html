@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026年11月13日</title>
+<meta name="dn:date" content="2026-11-13">
+<meta name="dn:issue" content="6">
+<meta name="dn:summary" content="黄仁勋辞任英伟达 CEO；乌克兰谈判纳入欧洲；微软 365 全球宕机。">
+<style>
+  :root{
+    --ink:#1b1f24; --muted:#5d6773; --faint:#8a939e;
+    --line:#e4e7eb; --bg:#f7f8fa; --card:#ffffff;
+    --blue:#1f4e79; --brick:#9c3b2e; --green:#2f5d50; --gold:#8a6a2f; --violet:#5b4a7a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:32px 18px 56px; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.78; letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+
+  /* ---------- 顶部导航 ---------- */
+  .topnav{font-size:13px;color:var(--faint);margin:0 0 18px;display:flex;gap:8px;align-items:center}
+  .topnav a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+  .topnav .sep{color:#c9ced5}
+
+  /* ---------- 页头 ---------- */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+  .kicker{font-size:12.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+  h1{font-size:29px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- 今日焦点 ---------- */
+  .focus{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);
+    border-radius:3px;padding:16px 20px 10px;margin:0 0 30px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  .focus h2{font-size:14px;margin:0 0 10px;color:var(--brick);letter-spacing:.08em}
+  .focus ol{margin:0;padding-left:20px}
+  .focus li{margin:0 0 8px;font-size:15px}
+  .focus li b{font-weight:650}
+
+  /* ---------- 区块卡片 ---------- */
+  section.card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 22px 14px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);
+    border-left:4px solid var(--line);
+  }
+  section.card.s1{border-left-color:var(--blue)}
+  section.card.s2{border-left-color:var(--brick)}
+  section.card.s3{border-left-color:var(--green)}
+  section.card.s4{border-left-color:var(--gold)}
+  section.card.s5{border-left-color:var(--violet)}
+  section.card.s6{border-left-color:var(--ink)}
+  h2.sec{
+    font-size:18px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;
+    letter-spacing:.01em;
+  }
+  h2.sec .num{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;color:#fff;
+    background:var(--ink);border-radius:2px;padding:2px 7px;position:relative;top:-2px;
+  }
+  h2.sec .en{font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:500}
+
+  ul.news{list-style:none;margin:0;padding:0}
+  ul.news>li{padding:0 0 13px;margin:0 0 13px;border-bottom:1px dashed var(--line)}
+  ul.news>li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:2px}
+  ul.news .lead{font-weight:650;color:var(--ink)}
+  .src{display:block;margin-top:5px;font-size:12.5px;color:var(--faint);line-height:1.6}
+  .src a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 6px;border-radius:2px;
+    vertical-align:1px;margin-left:4px;font-weight:600;border:1px solid;
+  }
+  .tag.ok{color:var(--green);border-color:rgba(47,93,80,.35);background:rgba(47,93,80,.06)}
+  .tag.rumor{color:var(--gold);border-color:rgba(138,106,47,.35);background:rgba(138,106,47,.07)}
+  .tag.tbd{color:var(--faint);border-color:#d5dae1;background:#f4f6f8}
+
+  /* ---------- 政策信号解读 ---------- */
+  .signal{
+    margin:16px 0 4px;padding:14px 18px;background:#faf7f4;
+    border:1px solid #eadfd6;border-left:3px solid var(--brick);border-radius:2px;
+  }
+  .signal h3{font-size:14px;margin:0 0 8px;color:var(--brick);letter-spacing:.05em}
+  .signal p{margin:0 0 9px;font-size:14.5px;color:#33383e}
+  .signal p:last-of-type{margin-bottom:10px}
+  .signal .note{font-size:12px;color:var(--faint);border-top:1px dashed #e0d3c8;padding-top:8px;margin:0}
+  .sig-item{margin:0 0 10px}
+  .sig-item .k{font-weight:650}
+
+  /* ---------- 表格 ---------- */
+  .tbl-wrap{overflow-x:auto;margin:6px 0 4px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  thead th{
+    text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;
+    border-bottom:1.5px solid var(--ink);padding:7px 10px 7px 0;white-space:nowrap;
+  }
+  tbody td{border-bottom:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  td .sub{display:block;font-weight:400;font-size:12.5px;color:var(--faint)}
+
+  /* ---------- 今日关注 ---------- */
+  .watch{background:#fff;border:1px solid var(--line);border-radius:3px;padding:16px 22px 8px;margin:0 0 26px}
+  .watch h2{font-size:15px;margin:0 0 10px;letter-spacing:.06em;color:var(--ink)}
+  .watch ul{margin:0;padding-left:18px}
+  .watch li{margin:0 0 7px;font-size:14.5px}
+
+  footer{border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--faint);line-height:1.7}
+  footer p{margin:0 0 6px}
+
+  @media (max-width:600px){
+    body{padding:20px 12px 40px;font-size:15.5px}
+    h1{font-size:23px}
+    section.card{padding:15px 16px 12px}
+    .focus{padding:14px 16px 8px}
+    .tbl-wrap{margin-left:-4px;margin-right:-4px}
+  }
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    section.card,.focus,.watch{box-shadow:none;break-inside:avoid}
+    a{color:#000;border-bottom:0}
+    .tbl-wrap{overflow:visible}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topnav"><a href="./index.html">← 全部简报</a><span class="sep">·</span><a href="./archive.html">归档</a><span class="sep">·</span><a href="https://github.com/RuntaoZhuge/daily-news" target="_blank" rel="noopener">GitHub</a></nav>
+
+  <header class="top">
+    <div class="kicker">Daily Briefing · Melbourne</div>
+    <div class="meta" style="margin-bottom:6px">
+      <span>2026 年 11 月 13 日 · 星期五</span>
+      <span>第 6 期</span>
+      <span>生成于 08:45 AEDT</span>
+      <span>覆盖 11 月 12—13 日</span>
+    </div>
+    <h1>世界、中国、澳洲与墨尔本：每日简报</h1>
+  </header>
+
+  <div class="focus">
+    <h2>今日焦点</h2>
+    <ol>
+      <li><b>黄仁勋辞任英伟达 CEO</b>，股价大跌，ASX 周五开盘承压。这是本轮 AI 行情以来最大的单一公司冲击。</li>
+      <li><b>乌克兰谈判出现实质进展</b>：威特科夫称普京同意欧洲谈判方加入下一轮；乌军无人机首次在波罗的海开阔水域击中俄舰。</li>
+      <li><b>微软 365 全球大宕机</b>，Outlook、Teams 等受影响，数万用户报告故障。</li>
+    </ol>
+  </div>
+
+  <!-- 1 世界 -->
+  <section class="card s1">
+    <h2 class="sec"><span class="num">01</span>世界主要事件<span class="en">WORLD</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">威特科夫：普京同意欧洲谈判方加入下一轮乌克兰谈判。</span>
+        <span class="tag ok">已确认</span>
+        美国特使 Steve Witkoff 在莫斯科会谈后表示，俄方同意让欧洲谈判代表参与下一轮磋商；他随后前往基辅会见泽连斯基。此前俄美乌三方谈判已在推进，欧洲被纳入是形式上的升级，但停火条件仍未触及。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/cwrkgmymk55zo" target="_blank" rel="noopener">BBC News</a></span>
+      </li>
+      <li>
+        <span class="lead">乌军无人机击中芬兰湾的俄罗斯军舰。</span>
+        <span class="tag ok">已确认</span>
+        BBC 称这是乌克兰无人机首次在波罗的海开阔水域攻击俄舰。战场从黑海向波罗的海延伸，意味着俄方需要分散防空资源，也提高了北约水域的擦枪走火风险。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/cmn0d33zz34zo" target="_blank" rel="noopener">BBC News</a></span>
+      </li>
+      <li>
+        <span class="lead">以军空袭加沙 Nasser 医院，称 6 人死亡。</span>
+        <span class="tag ok">已确认</span>
+        目击者称导弹击中了包含外科病房与重症监护的建筑。这是加沙南部最大的医院，袭击发生在以色列组阁谈判与停火斡旋的关键窗口，人道压力会直接传导到谈判桌上。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo" target="_blank" rel="noopener">BBC News</a></span>
+      </li>
+      <li>
+        <span class="lead">西班牙全国大罢工，巴塞罗那爆发冲突。</span>
+        <span class="tag ok">已确认</span>
+        数万人参与，由主要工会发起，诉求是住房与生活成本。继法国之后，欧洲的"生活成本抗议"正在向南欧扩散，这对各国财政与欧盟预算谈判都是压力。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/cwvg25nypmrvo" target="_blank" rel="noopener">BBC News</a></span>
+      </li>
+      <li>
+        <span class="lead">印尼副总统辞职。</span>
+        <span class="tag ok">已确认</span>
+        发生在总统 Prabowo 与前总统 Joko Widodo 裂痕加深之际，显示执政联盟正在松动。印尼是东南亚最大经济体，政局波动会影响镍、煤炭与外资预期。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/cmvgxgz87qqro" target="_blank" rel="noopener">BBC News</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 中国 -->
+  <section class="card s2">
+    <h2 class="sec"><span class="num">02</span>中国政治<span class="en">CHINA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">王毅与鲁比奥通话的后续信号（11 日）。</span>
+        <span class="tag ok">官方发布</span>
+        中方称通话"积极和建设性"，确认两国元首同意丰富中美关系新定位的内涵，并表示愿"相互支持办好 2026 年 APEC 与 G20"。两场峰会分别由中国与美国主办，互为支点。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201704.html" target="_blank" rel="noopener">央视 / 钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">长安汽车挂牌转让阿维塔 10% 股权，作价 31.8 亿元。</span>
+        <span class="tag ok">官方发布</span>
+        通过上海联合产权交易所挂牌，披露期至 12 月 10 日；交易完成后长安仍为第一大股东。这既是国资车企回笼资金，也是为阿维塔引入新股东、优化治理结构的动作。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203670.html" target="_blank" rel="noopener">财联社 / 钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">抖音电商"双 11"收官：超 2 万中小商家成交破百万。</span>
+        <span class="tag ok">官方发布</span>
+        平台称破亿商家数同比增 15%，店播破亿直播间数同比增 200%，330 个产业带成交过亿。数据说明消费并未消失，而是在向"低价＋直播"渠道迁移。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203609.html" target="_blank" rel="noopener">钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">注：今日党政务要闻未能获取。</span>
+        <span class="tag tbd">信息缺口</span>
+        检索接口连续故障，人民网与新京报的 RSS 源均为旧数据，因此本期中国政治板块只保留已核实的 11—12 日内容，未做补写。明天的简报会优先补齐政治局会议与国务院层面的动态。
+        <span class="src">来源：编辑部说明</span>
+      </li>
+    </ul>
+
+    <div class="signal">
+      <h3>政策信号解读</h3>
+      <div class="sig-item">
+        <span class="k">① "互相支持办会"是中美关系的新锚点。</span>
+        APEC（中国主办）与 G20（美国主办）互为对方的主场，双方承诺相互支持，等于给未来一年装了固定日程。对企业和市场而言，这意味着高层沟通有制度化的时间表，突发摩擦被"等峰会再说"缓冲的概率上升。
+      </div>
+      <div class="sig-item">
+        <span class="k">② 阿维塔股权转让是"国资车企瘦身"的样本。</span>
+        长安保留第一大股东但出让 10%，既回笼现金，也为引入战投留出空间。在价格战与产能过剩的背景下，这类动作会越来越多——行业整合从"建产能"转向"调股权"。
+      </div>
+      <div class="sig-item">
+        <span class="k">③ 双 11 数据说明消费在"降级中分层"。</span>
+        中小商家与产业带成交破百万的数量在增加，但这是在低价与直播补贴驱动下实现的。对澳洲出口商而言，中国消费市场的机会在"性价比"而非"高端化"，这个判断至少适用于未来一年。
+      </div>
+      <p class="note">以上为分析判断，非官方表述；①②③均基于已发布事实，其中②③含推论。</p>
+    </div>
+  </section>
+
+  <!-- 3 澳洲 -->
+  <section class="card s3">
+    <h2 class="sec"><span class="num">03</span>澳洲新闻<span class="en">AUSTRALIA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">医护团体促请 Albanese 把天然气枢纽资金转投达尔文新医院。</span>
+        <span class="tag ok">已确认</span>
+        医生与护理团体致信总理，要求取消北领地 Middle Arm 工业区的联邦资金，改用于建设新的皇家达尔文医院。这是"气候承诺 vs 地方医疗"的典型冲突，也考验工党在北领地的选情。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/anthony-albanese-middle-arm-royal-darwin-hospital-funding-letter/107379440" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">维州农民免于紧急服务税上涨，三党开出不同方案。</span>
+        <span class="tag ok">已确认</span>
+        工党承诺永久冻结农民的紧急服务税税率，联盟党与 One Nation 则主张彻底取消。农村选票在本次选举中的权重，从这条政策就能看出来。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/victorian-farmers-spared-emergency-services-levy-hike/107379618" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">AFP 警告青少年极端主义激增。</span>
+        <span class="tag ok">已确认</span>
+        自 2020 年以来被起诉的 37 名青少年中，有 32 人在过去两年被起诉。专家指出，多数人同时存在心理健康、学习障碍或家庭问题，"只靠逮捕"无法解决。
+        <span class="src">来源：<a href="https://www.theguardian.com/australia-news/2026/nov/13/australia-surge-in-teen-extremism-ntwnfb" target="_blank" rel="noopener">The Guardian</a>｜<a href="https://www.abc.net.au/news/2026-11-11/afp-warns-of-sharp-spike-in-minor-counter-terrorism-case/107369962" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">COP31：Bowen 推动"务实"协议，拒绝为煤炭天然气出口辩护。</span>
+        <span class="tag ok">已确认</span>
+        气候部长 Chris Bowen 称澳洲的化石燃料出口并未损害其在谈判中的地位，同时承认各国在"如何摆脱化石燃料"上仍难达成一致。对澳洲而言，这是外交与国内矿业利益的走钢丝。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/chris-bowen-seeks-pragmatic-consensus-nto-inal-cop31-talks/107380860" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 墨尔本 -->
+  <section class="card s4">
+    <h2 class="sec"><span class="num">04</span>墨尔本新闻<span class="en">MELBOURNE</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">维州上议院投票制度大改：团体投票票被取消。</span>
+        <span class="tag ok">已确认</span>
+        本次选举起，上议院不再使用争议极大的"团体投票票"（group voting tickets），选民需自行分配偏好。这可能把大量微型政党挡在门外，也意味着上议院的组成更难预测。
+        <span class="src">来源：<a href="https://www.theguardian.com/global/video/2026/nov/11/victoria-election-the-upper-house-vote-explained" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">工党社媒广告砸下数百万，AI 内容淹没选民。</span>
+        <span class="tag ok">已确认</span>
+        ABC 调查显示，工党在网络广告上投入巨大，但分析人士认为自由党与 One Nation 的内容在社媒上"更能穿透"。选民的疲劳感与 AI 生成内容的泛滥，正在改变竞选传播的效果。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/political-ads-vic-election-ai-social-media-use/107378416" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">墨尔本娱乐业：Ralph Carr 再添新指控。</span>
+        <span class="tag ok">已确认</span>
+        《卫报》独家报道，三名女性（包括前员工）提出新的性行为不当指控。Carr 今年已因强奸前雇员被判入狱。案件对墨尔本娱乐与经纪行业的治理提出了直接问题。
+        <span class="src">来源：<a href="https://www.theguardian.com/australia-news/ng-interactive/2026/nov/13/ralph-carr-convicted-rapist-new-allegations-sexual-touching-ntwnfb" target="_blank" rel="noopener">The Guardian</a></span>
+      </li>
+      <li>
+        <span class="lead">Geelong：被承诺"掏空"的城市，可能成为选情风向标。</span>
+        <span class="tag ok">已确认</span>
+        多项承诺项目被取消、推迟或搁置，当地选民的不满被视为对"不兑现承诺的政府"的测试。若 Geelong 翻盘，说明郊区选民对基建承诺的耐心已经耗尽。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/geelong-city-of-broken-promises-victoria/107376226" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 科技 -->
+  <section class="card s5">
+    <h2 class="sec"><span class="num">05</span>科技与 AI<span class="en">TECH</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">黄仁勋辞任英伟达 CEO，股价大跌。</span>
+        <span class="tag ok">已确认</span>
+        BBC 称其"在几天内从 seemingly untouchable 的科技领袖变成卷入丑闻的人物"，并追问英伟达的下一步。ABC 报道，英伟达股价因 CEO 离职大跌，直接拖累 ASX 周五开盘。这是本轮 AI 行情中最大的单一公司治理冲击。
+        <span class="src">来源：<a href="https://www.bbc.co.uk/news/articles/cmze750zg0jeo" target="_blank" rel="noopener">BBC News</a>｜<a href="https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">微软 365 全球大宕机，Outlook 与 Teams 受影响。</span>
+        <span class="tag ok">已确认</span>
+        微软称正"积极寻找所有途径"降低影响，并将问题归因于服务器故障；Down Detector 录得近 5 万条故障报告，涉及 Word、Excel、PowerPoint、Outlook、Teams 以及 SharePoint、OneDrive。云服务的单点故障再次暴露企业对其的深度依赖。
+        <span class="src">来源：<a href="https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-outlook-teams-word-excel-reports" target="_blank" rel="noopener">The Guardian</a>｜<a href="https://www.abc.net.au/news/2026-11-13/microsoft-outage-affects-users-worldwide/107381050" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">美银上调 2030 年服务器 CPU 市场至 2400 亿美元，AMD 是主要受益者。</span>
+        <span class="tag ok">已确认</span>
+        逻辑是 AI 从训练/推理转向"智能体 AI"，CPU 在数据中心的地位上升；2026—2030 年复合增速 39.2%。这是对"算力叙事"的一次结构性修正：不只是 GPU。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203622.html" target="_blank" rel="noopener">钛媒体 / 美银研报</a></span>
+      </li>
+      <li>
+        <span class="lead">谷歌联合三星、Gentle Monster、Warby Parker 推出 Gemini 智能眼镜，已开启预售。</span>
+        <span class="tag ok">已确认</span>
+        AI 硬件的竞争从手机转向可穿戴，渠道合作（眼镜品牌）是关键差异点。能否形成规模，取决于佩戴体验与隐私争议的处理。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203606.html" target="_blank" rel="noopener">钛媒体</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6 经济 -->
+  <section class="card s6">
+    <h2 class="sec"><span class="num">06</span>世界经济<span class="en">ECONOMY</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">ASX 周五开盘承压，源头上是英伟达。</span>
+        <span class="tag ok">已确认</span>
+        澳洲股市在英伟达 CEO 辞职后预计低开。澳洲 AI 敞口较低，但情绪传导无法避免；银行与资源股能否托住指数，是今天的观察点。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">现货黄金单日跌 3%，报 3867 美元/盎司。</span>
+        <span class="tag ok">已确认</span>
+        在风险资产反弹、美元企稳的组合下，黄金的避险溢价被挤出。对澳洲金矿股是直接利空，也说明市场暂时不认为地缘风险会立刻升级。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203621.html" target="_blank" rel="noopener">钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">中概股多数下跌，阿里巴巴跌近 7%、BOSS 直聘跌超 20%。</span>
+        <span class="tag ok">已确认</span>
+        在美股整体上涨的背景下，中概股逆势走弱，显示资金对中国的盈利预期仍偏谨慎。BOSS 直聘的暴跌与招聘需求走弱直接相关，是就业市场的先行指标。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation" target="_blank" rel="noopener">钛媒体快报</a></span>
+      </li>
+      <li>
+        <span class="lead">亚行批准首份《战略业务展望》：2027—2029 年融资承诺 1045 亿美元。</span>
+        <span class="tag ok">已确认</span>
+        亚行同时提出改革项目筹备与实施方式，并引入不同情景下的敏感性测试。对亚太基建与气候项目是中期资金利好。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8203613.html" target="_blank" rel="noopener">钛媒体</a></span>
+      </li>
+      <li>
+        <span class="lead">欧盟 2027 年预算达成协议：2115 亿欧元。</span>
+        <span class="tag ok">已确认</span>
+        理事会与议会已就总额达成一致，重点保障既定政策并增强应对乌克兰、中东危机的能力，14 天内需正式批准。
+        <span class="src">来源：<a href="https://www.tmtpost.com/nictation/8201673.html" target="_blank" rel="noopener">新华社 / 钛媒体</a></span>
+      </li>
+    </ul>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>最新 / 方向</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ASX 200</td>
+            <td class="num">预计低开</td>
+            <td>英伟达 CEO 辞职拖累<span class="sub">银行与资源股是支撑点</span></td>
+          </tr>
+          <tr>
+            <td>现货黄金</td>
+            <td class="num">3,867 美元</td>
+            <td>单日 −3%<span class="sub">避险溢价被挤出</span></td>
+          </tr>
+          <tr>
+            <td>美股（12 日）</td>
+            <td class="num">纳指 +1.53%</td>
+            <td>道指 +0.18%、标普 +0.96%<span class="sub">但英伟达消息在盘后发酵</span></td>
+          </tr>
+          <tr>
+            <td>中概股</td>
+            <td class="num">多数下跌</td>
+            <td>阿里 −7%、BOSS 直聘 −20%<span class="sub">盈利预期仍偏谨慎</span></td>
+          </tr>
+          <tr>
+            <td>欧盟 2027 预算</td>
+            <td class="num">2,115 亿欧元</td>
+            <td>理事会与议会达成协议<span class="sub">14 天内正式批准</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="watch">
+    <h2>今日关注</h2>
+    <ul>
+      <li>英伟达的接班安排与盘后股价，是否引发 AI 板块二次去杠杆。</li>
+      <li>微软宕机是否完全恢复，以及企业客户的迁移讨论。</li>
+      <li>乌克兰谈判：欧洲代表加入后的首轮磋商结果。</li>
+      <li>维州选战：上议院新投票规则对小党选情的影响。</li>
+      <li>ASX 周五收盘与银行、资源股表现。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>本期基于公开报道整理，链接指向原始来源。标注“传闻 / 未官宣”的信息未经官方确认，“待确认”表示数字或细节尚缺一手来源。</p>
+    <p>中国政治板块的“政策信号解读”为分析判断，不代表官方立场。本简报仅供信息参考，不构成投资建议。</p>
+    <p>生成时间：2026-11-13 08:45 AEDT · 覆盖 11 月 12—13 日 · 第 6 期</p>
+    <p style="margin-top:10px"><a href="./index.html">← 返回全部简报</a> · <a href="./archive.html">查看归档</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
