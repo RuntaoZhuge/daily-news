@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026年11月19日</title>
+<meta name="dn:date" content="2026-11-19">
+<meta name="dn:issue" content="9">
+<meta name="dn:summary" content="中俄美今日在深圳举行三方会晤；《GTA VI》全球发售；澳洲三季度工资环比涨 1.1% 仍跑输通胀。">
+<style>
+  :root{
+    --ink:#1b1f24; --muted:#5d6773; --faint:#8a939e;
+    --line:#e4e7eb; --bg:#f7f8fa; --card:#ffffff;
+    --blue:#1f4e79; --brick:#9c3b2e; --green:#2f5d50; --gold:#8a6a2f; --violet:#5b4a7a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:32px 18px 56px; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.78; letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+
+  /* ---------- 顶部导航 ---------- */
+  .topnav{font-size:13px;color:var(--faint);margin:0 0 18px;display:flex;gap:8px;align-items:center}
+  .topnav a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+  .topnav .sep{color:#c9ced5}
+
+  /* ---------- 页头 ---------- */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+  .kicker{font-size:12.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+  h1{font-size:29px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- 今日焦点 ---------- */
+  .focus{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);
+    border-radius:3px;padding:16px 20px 10px;margin:0 0 30px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  .focus h2{font-size:14px;margin:0 0 10px;color:var(--brick);letter-spacing:.08em}
+  .focus ol{margin:0;padding-left:20px}
+  .focus li{margin:0 0 8px;font-size:15px}
+  .focus li b{font-weight:650}
+
+  /* ---------- 区块卡片 ---------- */
+  section.card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 22px 14px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);
+    border-left:4px solid var(--line);
+  }
+  section.card.s1{border-left-color:var(--blue)}
+  section.card.s2{border-left-color:var(--brick)}
+  section.card.s3{border-left-color:var(--green)}
+  section.card.s4{border-left-color:var(--gold)}
+  section.card.s5{border-left-color:var(--violet)}
+  section.card.s6{border-left-color:var(--ink)}
+  h2.sec{
+    font-size:18px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;
+    letter-spacing:.01em;
+  }
+  h2.sec .num{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;color:#fff;
+    background:var(--ink);border-radius:2px;padding:2px 7px;position:relative;top:-2px;
+  }
+  h2.sec .en{font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:500}
+
+  ul.news{list-style:none;margin:0;padding:0}
+  ul.news>li{padding:0 0 13px;margin:0 0 13px;border-bottom:1px dashed var(--line)}
+  ul.news>li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:2px}
+  ul.news .lead{font-weight:650;color:var(--ink)}
+  .src{display:block;margin-top:5px;font-size:12.5px;color:var(--faint);line-height:1.6}
+  .src a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 6px;border-radius:2px;
+    vertical-align:1px;margin-left:4px;font-weight:600;border:1px solid;
+  }
+  .tag.ok{color:var(--green);border-color:rgba(47,93,80,.35);background:rgba(47,93,80,.06)}
+  .tag.rumor{color:var(--gold);border-color:rgba(138,106,47,.35);background:rgba(138,106,47,.07)}
+  .tag.tbd{color:var(--faint);border-color:#d5dae1;background:#f4f6f8}
+
+  /* ---------- 政策信号解读 ---------- */
+  .signal{
+    margin:16px 0 4px;padding:14px 18px;background:#faf7f4;
+    border:1px solid #eadfd6;border-left:3px solid var(--brick);border-radius:2px;
+  }
+  .signal h3{font-size:14px;margin:0 0 8px;color:var(--brick);letter-spacing:.05em}
+  .signal p{margin:0 0 9px;font-size:14.5px;color:#33383e}
+  .signal p:last-of-type{margin-bottom:10px}
+  .signal .note{font-size:12px;color:var(--faint);border-top:1px dashed #e0d3c8;padding-top:8px;margin:0}
+  .sig-item{margin:0 0 10px}
+  .sig-item .k{font-weight:650}
+
+  /* ---------- 表格 ---------- */
+  .tbl-wrap{overflow-x:auto;margin:6px 0 4px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  thead th{
+    text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;
+    border-bottom:1.5px solid var(--ink);padding:7px 10px 7px 0;white-space:nowrap;
+  }
+  tbody td{border-bottom:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  td .sub{display:block;font-weight:400;font-size:12.5px;color:var(--faint)}
+
+  /* ---------- 今日关注 ---------- */
+  .watch{background:#fff;border:1px solid var(--line);border-radius:3px;padding:16px 22px 8px;margin:0 0 26px}
+  .watch h2{font-size:15px;margin:0 0 10px;letter-spacing:.06em;color:var(--ink)}
+  .watch ul{margin:0;padding-left:18px}
+  .watch li{margin:0 0 7px;font-size:14.5px}
+
+  footer{border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--faint);line-height:1.7}
+  footer p{margin:0 0 6px}
+
+  @media (max-width:600px){
+    body{padding:20px 12px 40px;font-size:15.5px}
+    h1{font-size:23px}
+    section.card{padding:15px 16px 12px}
+    .focus{padding:14px 16px 8px}
+    .tbl-wrap{margin-left:-4px;margin-right:-4px}
+  }
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    section.card,.focus,.watch{box-shadow:none;break-inside:avoid}
+    a{color:#000;border-bottom:0}
+    .tbl-wrap{overflow:visible}
+  }
+
+  .notice{
+    background:#fdf6ec;border:1px solid #eadfcb;border-left:4px solid var(--gold);
+    border-radius:3px;padding:12px 18px;margin:0 0 22px;font-size:13.5px;color:#5d4a2f;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="./index.html">← 全部简报</a><span class="sep">·</span><a href="./archive.html">归档</a><span class="sep">·</span><a href="https://github.com/RuntaoZhuge/daily-news" target="_blank" rel="noopener">GitHub</a></nav>
+
+  <header class="top">
+    <div class="kicker">Daily Briefing · Melbourne</div>
+    <h1>世界、中国、澳洲与墨尔本：每日简报</h1>
+    <div class="meta">
+      <span>2026 年 11 月 19 日 · 星期四</span>
+      <span>第 9 期</span>
+      <span>生成于 10:40 AEDT</span>
+      <span>覆盖 11 月 17 日晚—19 日</span>
+    </div>
+  </header>
+
+  <div class="focus">
+    <h2>今日焦点</h2>
+    <ol>
+      <li><b>中俄美元首今天在深圳会晤</b>：三国领导人首次同场；特朗普把乌克兰列为议题，Witkoff 与 Kushner 同期在柏林谈安全保障。</li>
+      <li><b>《GTA VI》全球发售</b>：等了 13 年，史上最大规模娱乐产品开卖；HR 平台称全球请假申请激增 32%。</li>
+      <li><b>澳洲工资环比涨 1.1% 仍跑输通胀</b>：近三年最强季度涨幅，实际工资连续第四季下滑；RBA 已加息至 4.85%。</li>
+    </ol>
+  </div>
+
+  <!-- 1 世界 -->
+  <section class="card s1">
+    <h2 class="sec"><span class="num">01</span>世界主要事件<span class="en">WORLD</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">中俄美元首会晤今天在深圳举行。</span>
+        <span class="tag ok">已确认</span>
+        外交部 16 日宣布，习近平 19 日同普京、特朗普在深圳举行中俄美元首会晤；18 日下午，习近平在宝安国际机场迎接来华出席 APEC 领导人非正式会议的特朗普。这是三位领导人首次同场会谈。特朗普行前称乌克兰会是主要议题之一——真正的看点是能否形成可执行的停火框架，而不是合影本身。
+        <span class="src">来源：<a href="https://mo.ocmfa.gov.cn/chn/xwdt/wjyw/202611/t20261116_12059654.htm" target="_blank" rel="noopener">外交部驻澳门特派员公署</a>｜<a href="https://escap.china-mission.gov.cn/zgyw/202611/t20261118_12062092.htm" target="_blank" rel="noopener">常驻联合国亚太经社会代表处</a></span>
+      </li>
+      <li>
+        <span class="lead">以色列议会选出新议长，内塔尼亚胡对议程的控制被削弱。</span>
+        <span class="tag ok">已确认</span>
+        Matan Kahana 以 66 票（共 120 席）当选，他是前国防军总参谋长 Eisenkot 的盟友；Eisenkot 正牵头组建替代内塔尼亚胡的政府。议长易手通常意味着组阁已进入实质阶段，而不是又一轮试探。
+        <span class="src">来源：<a href="https://www.thehindu.com/news/international/israeli-parliament-elects-new-knesset-speaker-backed-by-netanyahus-opponents/article71714379.ece" target="_blank" rel="noopener">The Hindu</a></span>
+      </li>
+      <li>
+        <span class="lead">加沙停火监督机构警告：协议有崩塌风险。</span>
+        <span class="tag ok">已确认</span>
+        「和平委员会」向安理会提交首份年度评估，指双方都未履行停止敌对行动的承诺，纸面谅解与地面现实之间的落差是最大威胁，并要求安理会施压、加快重建。加沙冬季帐篷与物资入境受阻，人道指标继续恶化。
+        <span class="src">来源：<a href="https://alquds.com/en/posts/275158-peace-council-warns-of-gaza-ceasefire-collapse-and-demands-security-council" target="_blank" rel="noopener">Al-Quds</a></span>
+      </li>
+      <li>
+        <span class="lead">敖德萨遭袭致 4 死，乌军打击俄南部两座炼油厂。</span>
+        <span class="tag ok">已确认</span>
+        泽连斯基称多布罗皮利亚与科斯强季尼夫卡两地"阵地稳固"，否认俄方"已占领"的说法。与此同时，Witkoff 与 Kushner 19 日在柏林会晤乌方与欧洲谈判团队，议题是"可信的战后安全保障"、经济复苏计划与下一轮多边谈判——阿布扎比会谈是九个月来首次。
+        <span class="src">来源：<a href="https://www.canberratimes.com.au/story/9394301/ukraine-hits-russian-refineries-us-envoys-visit-berlin/" target="_blank" rel="noopener">The Canberra Times / AP</a></span>
+      </li>
+      <li>
+        <span class="lead">中日领导人在 APEC 握手，台湾言论僵局未解。</span>
+        <span class="tag ok">已确认</span>
+        高市早苗以首相身份首次访华，与习近平在深圳握手；但中方坚持要求收回一年前"台湾有事可能构成存亡危机事态"的表态，日方未让步。握手是姿态，僵局仍在。
+        <span class="src">来源：<a href="https://f.aa.com.tr/en/asia-pacific/chinese-japanese-leaders-shake-hands-at-apec-summit-amid-soured-ties/4129510" target="_blank" rel="noopener">Anadolu Agency</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 中国 -->
+  <section class="card s2">
+    <h2 class="sec"><span class="num">02</span>中国政治<span class="en">CHINA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">习近平在 APEC 工商领导人峰会发表主旨演讲。</span>
+        <span class="tag ok">官方发布</span>
+        演讲题为《坚定信心，勇毅前行 共创亚太光明未来》，提出四条主线：维护和平稳定大局、搭建开放合作桥梁、激发创新增长动力、拓展互利共赢路径；明确支持<b>成立世界湾区经济合作联盟</b>，并称"十五五"规划是面向全球工商界的"合作邀约"。具体承诺包括制造业"准入又准营"、稳步扩大服务业开放、扩大优质产品进口。
+        <span class="src">来源：<a href="https://us.china-embassy.gov.cn/chn/zgyw/202611/t20261118_12061656.htm" target="_blank" rel="noopener">驻美大使馆（演讲全文）</a></span>
+      </li>
+      <li>
+        <span class="lead">10 月经济数据：工业增加值 +4.8%，进出口 +31.2%。</span>
+        <span class="tag ok">官方发布</span>
+        规模以上工业增加值同比 +4.8%、环比 +0.21%；10 月货物进出口 4.87 万亿元、同比 +31.2%；CPI 同比 +0.7%、核心 CPI +0.8%；PPI 同比 +5.7%，涨幅比上月扩大 0.7 个百分点。生产端与出口强、消费价格弱，是本轮数据最醒目的组合。
+        <span class="src">来源：<a href="http://www.scio.gov.cn/live/2026/39889/index_m.html" target="_blank" rel="noopener">国新办发布会</a></span>
+      </li>
+      <li>
+        <span class="lead">国务院常务会议再提资本市场"稳市机制"。</span>
+        <span class="tag ok">官方发布</span>
+        会议围绕"六张网"等重大项目、政策性资金及时足额拨付、稳就业与防风险作出部署，并要求持续强化资本市场稳市机制。在外部芯片管制收紧的背景下，资本市场被更明确地当作信心与融资工具。
+        <span class="src">来源：<a href="https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/lastest/rptid/848340147249/index.phtml" target="_blank" rel="noopener">券商点评（引国常会通稿）</a></span>
+      </li>
+      <li>
+        <span class="lead">第十五届全国减轻企业负担政策宣传周启动。</span>
+        <span class="tag ok">官方发布</span>
+        国务院减负部际联席会议称，明年将围绕"降本增效"完善惠企减负政策运行机制，保持减税降费力度、明确到期政策后续安排、推动降低全社会物流成本。这是把"降成本"从年度动作变成常态机制。
+        <span class="src">来源：<a href="https://finance.sina.com.cn/roll/2026-11-18/doc-inizehkz6884305.shtml" target="_blank" rel="noopener">中新社</a></span>
+      </li>
+      <li>
+        <span class="lead">商务部：坚决反对美方芯片"第三国转运"新规。</span>
+        <span class="tag ok">官方发布</span>
+        美国商务部要求特定国家的先进芯片买家在转售或转移前申请许可，意图堵住经第三国获取算力的通道。中方称这是"滥用出口管制、干涉正常贸易"。
+        <span class="src">来源：<a href="http://epaper.chinadaily.com.cn/a/202611/18/WS6afcf64ae4b07a432ddca527.html" target="_blank" rel="noopener">China Daily</a></span>
+      </li>
+    </ul>
+
+    <div class="signal">
+      <h3>政策信号解读</h3>
+      <div class="sig-item">
+        <span class="k">① "世界湾区经济合作联盟"是这次演讲里最实的一句。</span>
+        它把粤港澳大湾区从区域概念升级为规则平台：深圳做主场，输出的是湾区标准、通关与数据流动的接口。若后续有秘书处与成员名单落地，影响会大于一般的论坛倡议。
+      </div>
+      <div class="sig-item">
+        <span class="k">② PPI +5.7% 与 CPI +0.7% 的剪刀差，指向中游制造的真实处境。</span>
+        上游涨价能传导到出厂价，却传不到消费端，差额由中游企业吸收。这正好解释了为什么明年的减负主线是"降本增效"——不是刺激需求，而是先保住利润与就业。
+      </div>
+      <div class="sig-item">
+        <span class="k">③ "稳市机制"写进国常会，意味着股市的政策权重继续上升。</span>
+        在出口与地产两端都不稳时，资本市场承担了信心锚的功能。对投资者的含义是"托底意愿强、托价意愿弱"：急跌会有政策回应，但趋势仍由盈利决定。
+      </div>
+      <p class="note">以上为分析判断，非官方表述；①③含推论，②为已发布数据的解读。</p>
+    </div>
+  </section>
+
+  <!-- 3 澳洲 -->
+  <section class="card s3">
+    <h2 class="sec"><span class="num">03</span>澳洲新闻<span class="en">AUSTRALIA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">三季度工资环比 +1.1%，近三年最强，但仍跑输通胀。</span>
+        <span class="tag ok">已确认</span>
+        ABS 数据显示，季调后工资价格指数（WPI）环比 +1.1%（前值 +0.7%），同比 +3.5%，为 2023 年末以来最高。但通胀更高，实际工资已连续第四个季度下滑。工资超预期也强化了 RBA 的鹰派理由。
+        <span class="src">来源：<a href="https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/sep-2026" target="_blank" rel="noopener">ABS</a></span>
+      </li>
+      <li>
+        <span class="lead">RBA 11 月加息至 4.85%，市场预期转向"按兵不动"。</span>
+        <span class="tag ok">已确认</span>
+        这是年内第五次加息，且是分歧很大的决定；会议纪要显示委员曾讨论再加 25 个基点。联邦银行经济学家判断后续将进入观望。对家庭而言，房贷重定价的压力还在往 2027 年传。
+        <span class="src">来源：<a href="https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-11-03.html" target="_blank" rel="noopener">RBA 会议纪要</a></span>
+      </li>
+      <li>
+        <span class="lead">联邦政府推进东海岸天然气保留计划。</span>
+        <span class="tag ok">已确认</span>
+        助理财长 Andrew Leigh 称，澳洲约四分之三的天然气用于出口，制造业与家庭却承受国际价格波动；保留计划意在制造"温和的过剩"，压低批发气价与电价。这是 2013 年就提出的老方案，如今才进入落地阶段。
+        <span class="src">来源：<a href="https://www.andrewleigh.com/transcript_doorstop_19_november_2026" target="_blank" rel="noopener">Andrew Leigh 办公室（发布会实录）</a></span>
+      </li>
+      <li>
+        <span class="lead">David Jones 裁员逾 1500 人，半数为无权益临时工。</span>
+        <span class="tag ok">已确认</span>
+        接管方关闭约半数门店。零售收缩叠加实际工资下滑，是澳洲内需最直接的两个压力点；临时工占比高，也意味着失业冲击不会立刻体现在失业率上。
+        <span class="src">来源：<a href="https://5news.com.br/au/noticia/LHQ1XH3l_BLup5-0/half-of-david-jones-job-cuts-are-casual-staff-with-no-entitlements" target="_blank" rel="noopener">5 News / AAP</a></span>
+      </li>
+      <li>
+        <span class="lead">板球"砂纸门"重启：Bancroft 称全队知情。</span>
+        <span class="tag ok">已确认</span>
+        2018 年开普敦事件的核心当事人称，当时队内所有人都知道用砂纸改变球面。这会把责任从三名球员扩大到管理体系，澳洲板球的治理与赞助关系将再受审视。
+        <span class="src">来源：<a href="https://www.abc.net.au/listen/programs/abc-news-top-stories/bancroft-crisis-sandpaper-cricket/107401894" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">一国党主张取消父母签证、难民名额削减九成。</span>
+        <span class="tag tbd">待确认</span>
+        该党在选前抛出移民收紧方案，具体条文尚未公布，目前仅见媒体转述。若成为参议院议价条件，会影响家庭团聚与技术移民的排队结构。
+        <span class="src">来源：<a href="https://www.youtube.com/live/OfGzEIyGVXg" target="_blank" rel="noopener">澳媒汇总（待原文核实）</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 墨尔本 -->
+  <section class="card s4">
+    <h2 class="sec"><span class="num">04</span>墨尔本新闻<span class="en">MELBOURNE</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">维州大选倒计时 9 天，提前投票已开始。</span>
+        <span class="tag ok">已确认</span>
+        11 月 28 日投票。工党州长 Ben Carroll（7 月接替 Jacinta Allan）对阵自由党领袖 Jess Wilson，民调显示工党落后：Wilson 39%、绿党 Sandell 25%、一国党 Pickering 16%。Prahran 等内城边缘席位是关键，偏好票与上议院规则可能决定最终格局。
+        <span class="src">来源：<a href="https://www.canberratimes.com.au/story/9394297/early-voters-highly-motivated-but-deeply-divided/" target="_blank" rel="noopener">The Canberra Times</a></span>
+      </li>
+      <li>
+        <span class="lead">百万元绑架案：母女获救，三人被捕。</span>
+        <span class="tag ok">已确认</span>
+        警方称一名母亲与她 9 岁的女儿在持续约 20 小时的劫持后安全获救，三名嫌疑人被捕，案情涉及约 100 万澳元的勒索。案件已进入司法程序，细节以警方通报为准。
+        <span class="src">来源：<a href="https://www.couriermail.com.au/news/mother-and-daughter-safe-as-police-arrest-three-over-alleged-1m-melbourne-hostage-ordeal/news-story/f04046610b6667013bb0886b7addd8fd" target="_blank" rel="noopener">The Courier-Mail</a></span>
+      </li>
+      <li>
+        <span class="lead">Tarneit 街头斗殴监控公布，六人被捕。</span>
+        <span class="tag ok">已确认</span>
+        10 月 4 日的斗殴中，多人持棒球棍与板球拍，一名男子重伤危及生命。警方逮捕了 6 名 22 至 43 岁男子，来自 Tarneit 与 Truganina。这类"器械化"街头冲突在西区呈上升趋势。
+        <span class="src">来源：<a href="https://newsapp.abc.net.au/news/2026-11-19/vic-police-investigate-tarneit-brawl/107401714" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">内城美甲店两天内两度遭纵火。</span>
+        <span class="tag ok">已确认</span>
+        警方正在调查是否与同一团伙有关。小商户连续被针对，通常与勒索、保险或同业纠纷相关，但动机尚未确认。
+        <span class="src">来源：<a href="https://www.9news.com.au/" target="_blank" rel="noopener">9News</a></span>
+      </li>
+      <li>
+        <span class="lead">天气：多云转阴，12–24°C，降雨概率 40%。</span>
+        <span class="tag ok">已确认</span>
+        周四多云，最低 12°C、最高 24°C，局地 0–1mm 小雨，紫外线指数可达 10（极高），午后需防晒。周五转晴、气温回升。
+        <span class="src">来源：<a href="https://www.bom.gov.au/places/vic/melbourne/forecast/" target="_blank" rel="noopener">Bureau of Meteorology</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 科技 -->
+  <section class="card s5">
+    <h2 class="sec"><span class="num">05</span>科技与 AI<span class="en">TECH</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">《GTA VI》今日全球发售。</span>
+        <span class="tag ok">已确认</span>
+        登陆 PS5 与 Xbox Series X|S，开发周期 13 年，被视为史上最大规模的娱乐产品发售。HR 平台 Remote 称全球 11 月 19 日前后请假申请增加 32%。它同时也是本季度游戏与主机产业链最确定的现金流事件。
+        <span class="src">来源：<a href="https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026" target="_blank" rel="noopener">Rockstar Games</a>｜<a href="https://www.kbc.co.ke/excitement-grips-the-world-ahead-of-gta-vi-release-on-thursday/" target="_blank" rel="noopener">KBC</a></span>
+      </li>
+      <li>
+        <span class="lead">Nvidia 进入"后黄仁勋"时代，董事会拒绝复职。</span>
+        <span class="tag ok">已确认</span>
+        黄仁勋 11 月 12 日辞去总裁、CEO 与董事职务，CFO Colette Kress 任临时 CEO。黄其后称自己"犯了严重错误"，但"若有邀请会荣幸回归"；FT 报道他在考虑复出，董事会则明确不予恢复。公司已发布他离职后的首份财报。
+        <span class="src">来源：<a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener">NVIDIA 新闻稿</a>｜<a href="https://news.sky.com/story/jensen-huang-acknowledges-serious-mistakes-but-says-he-would-be-honoured-to-return-as-nvidia-ceo-13613323" target="_blank" rel="noopener">Sky News</a></span>
+      </li>
+      <li>
+        <span class="lead">美国收紧 AI 芯片"第三国转运"漏洞。</span>
+        <span class="tag ok">已确认</span>
+        新规要求特定国家的先进芯片买家在转售或转移前取得许可，直接打击经第三国转口的路径。短期会推高中国企业的算力成本，中期则加速国产替代——这是过去两年反复验证的同一套机制。
+        <span class="src">来源：<a href="http://epaper.chinadaily.com.cn/a/202611/18/WS6afcf64ae4b07a432ddca527.html" target="_blank" rel="noopener">China Daily</a></span>
+      </li>
+      <li>
+        <span class="lead">Nvidia 在中国数据中心 AI 芯片份额降至 34%。</span>
+        <span class="tag ok">已确认</span>
+        2026 年上半年，其份额从接近垄断跌至 34%，华为等国产厂商份额上升。出口管制与国产替代同时作用，市场结构已经不可逆地改变。
+        <span class="src">来源：<a href="http://www.chinadaily.com.cn/a/202611/18/WS6afd8e9de4b03ebf8519d3ec.html" target="_blank" rel="noopener">China Daily</a></span>
+      </li>
+      <li>
+        <span class="lead">OpenAI 上线"锁定会话"等 ChatGPT 更新。</span>
+        <span class="tag ok">已确认</span>
+        用户可把选定对话从常规历史中隐藏；同期上线 Sites 的混排编辑能力。对企业客户而言，可控的会话留存正在成为采购清单上的硬指标。
+        <span class="src">来源：<a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI Release Notes</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6 经济 -->
+  <section class="card s6">
+    <h2 class="sec"><span class="num">06</span>世界经济<span class="en">ECONOMY</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">ASX 200 五连跌，收 8821.80 点。</span>
+        <span class="tag ok">已确认</span>
+        周三大盘跌 61.40 点（-0.69%），All Ordinaries 跌 0.72% 至 8932.40。科技与矿业领跌，金价与铁矿石走弱是主因。五连跌意味着市场已从"利率冲击"切换到"盈利下修"。
+        <span class="src">来源：<a href="https://www.news.com.au/finance/markets/australian-markets/australian-shares-tumble-as-wall-street-tech-rout-and-falling-commodity-prices-hit-asx/news-story/1568a5fd523a62a1259a310f6e27e0e7" target="_blank" rel="noopener">News.com.au</a></span>
+      </li>
+      <li>
+        <span class="lead">美股分化：标普走低，纳指靠 Nvidia 撑住；联储纪要偏鹰。</span>
+        <span class="tag ok">已确认</span>
+        标普 500 下跌，纳斯达克小幅收高，黄金大跌。纪要让"更久的高利率"重新成为基准情形，这对高估值成长股与黄金同时构成压力。
+        <span class="src">来源：<a href="https://kalkinemedia.com/au/news/morning-wrap/asx-morning-wrap-asx-200-to-fall-as-sp-500-slips-and-nasdaq-edges-up-on-nvidia-fed-minutes" target="_blank" rel="noopener">Kalkine Media</a></span>
+      </li>
+      <li>
+        <span class="lead">澳元承压：工资超预期，抵不过铁矿石走弱。</span>
+        <span class="tag ok">已确认</span>
+        强劲的工资数据本该利多澳元，但铁矿石期货向 640 元/吨靠拢、工业金属普遍回落，压过了利差逻辑。澳洲资产的定价权，短期更多在大宗商品手里。
+        <span class="src">来源：<a href="https://www.insigtx.com/en/news/aud-weakness-persists-despite-strong-wages-bbh-327553/" target="_blank" rel="noopener">BBH 分析</a></span>
+      </li>
+      <li>
+        <span class="lead">中国 10 月出口同比 +31.2%，与 PPI +5.7% 同向。</span>
+        <span class="tag ok">官方发布</span>
+        出口高增与出厂价上行并存，说明外需仍在承接部分产能；但 CPI 仅 +0.7%，内需价格弹性有限。对澳洲而言，这意味着铁矿石需求的"量"还在、"价"已弱。
+        <span class="src">来源：<a href="http://www.scio.gov.cn/live/2026/39889/index_m.html" target="_blank" rel="noopener">国新办</a></span>
+      </li>
+    </ul>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>最新 / 方向</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ASX 200</td>
+            <td class="num">8821.80</td>
+            <td>-0.69%，五连跌<span class="sub">All Ords 8932.40</span></td>
+          </tr>
+          <tr>
+            <td>澳洲工资（WPI）</td>
+            <td class="num">+1.1%</td>
+            <td>三季度环比<span class="sub">同比 +3.5%，仍低于通胀</span></td>
+          </tr>
+          <tr>
+            <td>现金利率</td>
+            <td class="num">4.85%</td>
+            <td>年内第五次加息<span class="sub">市场转向观望</span></td>
+          </tr>
+          <tr>
+            <td>中国 10 月工业增加值</td>
+            <td class="num">+4.8%</td>
+            <td>同比<span class="sub">环比 +0.21%</span></td>
+          </tr>
+          <tr>
+            <td>中国 10 月进出口</td>
+            <td class="num">4.87 万亿元</td>
+            <td>同比 +31.2%<span class="sub">PPI +5.7%，CPI +0.7%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="watch">
+    <h2>明日关注</h2>
+    <ul>
+      <li>深圳三方会晤的成果表述，尤其是乌克兰条款与是否设后续机制。</li>
+      <li>柏林会谈：对乌安全保障方案、经济复苏计划与下一轮多边谈判时间表。</li>
+      <li>Nvidia 财报后的市场反应，以及美国芯片新规的执行细则。</li>
+      <li>维州大选最后一周：Prahran、Northcote 等边缘席位的偏好票流向。</li>
+      <li>《GTA VI》首日销量与 Take-Two 股价反应。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>本期基于公开报道整理，链接指向原始来源。标注“传闻 / 未官宣”的信息未经官方确认，“待确认”表示数字或细节尚缺一手来源。</p>
+    <p>中国政治板块的“政策信号解读”为分析判断，不代表官方立场。本简报仅供信息参考，不构成投资建议。</p>
+    <p>生成时间：2026-11-19 10:40 AEDT · 覆盖 11 月 17 日晚—19 日 · 第 9 期</p>
+    <p style="margin-top:10px"><a href="./index.html">← 返回全部简报</a> · <a href="./archive.html">查看归档</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
