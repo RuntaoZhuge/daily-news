@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026年11月21日</title>
+<meta name="dn:date" content="2026-11-21">
+<meta name="dn:issue" content="11">
+<meta name="dn:summary" content="ICJ 裁定缅甸对罗兴亚人实施种族灭绝；中澳举行第十一轮总理年度会晤并发表联合成果声明；ASX 200 全周跌约 490 点、创疫情以来最差一周。">
+<style>
+  :root{
+    --ink:#1b1f24; --muted:#5d6773; --faint:#8a939e;
+    --line:#e4e7eb; --bg:#f7f8fa; --card:#ffffff;
+    --blue:#1f4e79; --brick:#9c3b2e; --green:#2f5d50; --gold:#8a6a2f; --violet:#5b4a7a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; padding:32px 18px 56px; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.78; letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(31,78,121,.28)}
+  a:hover{border-bottom-color:var(--blue)}
+
+  /* ---------- 顶部导航 ---------- */
+  .topnav{font-size:13px;color:var(--faint);margin:0 0 18px;display:flex;gap:8px;align-items:center}
+  .topnav a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+  .topnav .sep{color:#c9ced5}
+
+  /* ---------- 页头 ---------- */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:22px}
+  .kicker{font-size:12.5px;letter-spacing:.22em;color:var(--faint);text-transform:uppercase;margin-bottom:6px}
+  h1{font-size:29px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- 今日焦点 ---------- */
+  .focus{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--brick);
+    border-radius:3px;padding:16px 20px 10px;margin:0 0 30px;
+    box-shadow:0 1px 2px rgba(20,30,45,.04);
+  }
+  .focus h2{font-size:14px;margin:0 0 10px;color:var(--brick);letter-spacing:.08em}
+  .focus ol{margin:0;padding-left:20px}
+  .focus li{margin:0 0 8px;font-size:15px}
+  .focus li b{font-weight:650}
+
+  /* ---------- 区块卡片 ---------- */
+  section.card{
+    background:var(--card);border:1px solid var(--line);border-radius:3px;
+    padding:18px 22px 14px;margin:0 0 20px;box-shadow:0 1px 2px rgba(20,30,45,.04);
+    border-left:4px solid var(--line);
+  }
+  section.card.s1{border-left-color:var(--blue)}
+  section.card.s2{border-left-color:var(--brick)}
+  section.card.s3{border-left-color:var(--green)}
+  section.card.s4{border-left-color:var(--gold)}
+  section.card.s5{border-left-color:var(--violet)}
+  section.card.s6{border-left-color:var(--ink)}
+  h2.sec{
+    font-size:18px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px;
+    letter-spacing:.01em;
+  }
+  h2.sec .num{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;color:#fff;
+    background:var(--ink);border-radius:2px;padding:2px 7px;position:relative;top:-2px;
+  }
+  h2.sec .en{font-size:11.5px;color:var(--faint);letter-spacing:.08em;font-weight:500}
+
+  ul.news{list-style:none;margin:0;padding:0}
+  ul.news>li{padding:0 0 13px;margin:0 0 13px;border-bottom:1px dashed var(--line)}
+  ul.news>li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:2px}
+  ul.news .lead{font-weight:650;color:var(--ink)}
+  .src{display:block;margin-top:5px;font-size:12.5px;color:var(--faint);line-height:1.6}
+  .src a{color:var(--muted);border-bottom:1px dotted #c2c8d0}
+
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.04em;padding:1px 6px;border-radius:2px;
+    vertical-align:1px;margin-left:4px;font-weight:600;border:1px solid;
+  }
+  .tag.ok{color:var(--green);border-color:rgba(47,93,80,.35);background:rgba(47,93,80,.06)}
+  .tag.rumor{color:var(--gold);border-color:rgba(138,106,47,.35);background:rgba(138,106,47,.07)}
+  .tag.tbd{color:var(--faint);border-color:#d5dae1;background:#f4f6f8}
+
+  /* ---------- 政策信号解读 ---------- */
+  .signal{
+    margin:16px 0 4px;padding:14px 18px;background:#faf7f4;
+    border:1px solid #eadfd6;border-left:3px solid var(--brick);border-radius:2px;
+  }
+  .signal h3{font-size:14px;margin:0 0 8px;color:var(--brick);letter-spacing:.05em}
+  .signal p{margin:0 0 9px;font-size:14.5px;color:#33383e}
+  .signal p:last-of-type{margin-bottom:10px}
+  .signal .note{font-size:12px;color:var(--faint);border-top:1px dashed #e0d3c8;padding-top:8px;margin:0}
+  .sig-item{margin:0 0 10px}
+  .sig-item .k{font-weight:650}
+
+  /* ---------- 表格 ---------- */
+  .tbl-wrap{overflow-x:auto;margin:6px 0 4px;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:520px}
+  thead th{
+    text-align:left;font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:600;
+    border-bottom:1.5px solid var(--ink);padding:7px 10px 7px 0;white-space:nowrap;
+  }
+  tbody td{border-bottom:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+  td .sub{display:block;font-weight:400;font-size:12.5px;color:var(--faint)}
+
+  /* ---------- 今日关注 ---------- */
+  .watch{background:#fff;border:1px solid var(--line);border-radius:3px;padding:16px 22px 8px;margin:0 0 26px}
+  .watch h2{font-size:15px;margin:0 0 10px;letter-spacing:.06em;color:var(--ink)}
+  .watch ul{margin:0;padding-left:18px}
+  .watch li{margin:0 0 7px;font-size:14.5px}
+
+  footer{border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--faint);line-height:1.7}
+  footer p{margin:0 0 6px}
+
+  @media (max-width:600px){
+    body{padding:20px 12px 40px;font-size:15.5px}
+    h1{font-size:23px}
+    section.card{padding:15px 16px 12px}
+    .focus{padding:14px 16px 8px}
+    .tbl-wrap{margin-left:-4px;margin-right:-4px}
+  }
+  @media print{
+    body{background:#fff;padding:0;font-size:11pt}
+    section.card,.focus,.watch{box-shadow:none;break-inside:avoid}
+    a{color:#000;border-bottom:0}
+    .tbl-wrap{overflow:visible}
+  }
+
+  .notice{
+    background:#fdf6ec;border:1px solid #eadfcb;border-left:4px solid var(--gold);
+    border-radius:3px;padding:12px 18px;margin:0 0 22px;font-size:13.5px;color:#5d4a2f;line-height:1.7;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="./index.html">← 全部简报</a><span class="sep">·</span><a href="./archive.html">归档</a><span class="sep">·</span><a href="https://github.com/RuntaoZhuge/daily-news" target="_blank" rel="noopener">GitHub</a></nav>
+
+  <header class="top">
+    <div class="kicker">Daily Briefing · Melbourne</div>
+    <h1>世界、中国、澳洲与墨尔本：每日简报</h1>
+    <div class="meta">
+      <span>2026 年 11 月 21 日 · 星期六</span>
+      <span>第 11 期</span>
+      <span>生成于 10:15 AEDT</span>
+      <span>覆盖 11 月 20 日—21 日晨间</span>
+    </div>
+  </header>
+
+  <div class="focus">
+    <h2>今日焦点</h2>
+    <ol>
+      <li><b>ICJ 裁定缅甸对罗兴亚人实施种族灭绝</b>：9 比 6 的表决结果，是国际法院首次就"种族灭绝"作出实体认定；缅甸军政府称"不公"，欧盟欢迎、美国态度谨慎。</li>
+      <li><b>中澳举行第十一轮总理年度会晤</b>：习近平上午在深圳会见阿尔巴尼斯，李强下午在钓鱼台会谈并发表联合成果声明；明年建交 55 周年、"中澳旅游年"是抓手。</li>
+      <li><b>ASX 200 创疫情以来最差一周</b>：全周跌约 490 点，周五收 8,592.60；美股 AI 交易继续瓦解，纳指单日跌 2.9%，Anthropic 上市次日跌近一成。</li>
+    </ol>
+  </div>
+
+  <!-- 1 世界 -->
+  <section class="card s1">
+    <h2 class="sec"><span class="num">01</span>世界主要事件<span class="en">WORLD</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">国际法院认定缅甸对罗兴亚人实施种族灭绝，缅甸拒绝接受。</span>
+        <span class="tag ok">已确认</span>
+        国际法院（ICJ）以 9 比 6 裁定，缅甸军方在 2016—2017 年针对罗兴亚人的"清剿行动"构成种族灭绝。这是该法院首次在实体判决中认定一国实施种族灭绝。缅甸军政府 20 日回应称判决"不公""并非一致通过"。欧盟称其"具有里程碑意义"，美国则对"司法政治化"表示警惕，态度明显更谨慎。
+        <span class="src">来源：<a href="https://anadolu.agency/en/asia-pacific/myanmar-calls-icj-genocide-ruling-over-rohingya-unfair/4131983" target="_blank" rel="noopener">Anadolu Agency</a>｜<a href="https://www.yna.co.kr/view/AKR20261120131100009" target="_blank" rel="noopener">韩联社（引卫报）</a>｜<a href="https://saba.ye/en/news3839110.htm" target="_blank" rel="noopener">HRW 声明</a></span>
+      </li>
+      <li>
+        <span class="lead">胡塞武装威胁打击沙特红海港口与利雅得金融中心，并警告航空公司。</span>
+        <span class="tag ok">已确认</span>
+        胡塞军方发言人萨里 20 日点名沙特西南部的 Shukaik 电厂、红海港口与利雅得一处金融中心为"合法打击目标"，并称若荷台达港遭袭，吉达与沙特全部红海港口都将成为目标。此前沙特领导的联军要求荷台达港平民撤离。威胁同时覆盖民航航路，意味着冲突外溢到航运与保险成本的概率在上升。
+        <span class="src">来源：<a href="http://chinaview.cn/20261120/1336f3e859ff4a65aaf8737485e64c4c/c.html" target="_blank" rel="noopener">新华社</a>｜<a href="https://www.spa.gov.sa/en/N2732160" target="_blank" rel="noopener">沙特通讯社</a>｜<a href="https://www.yna.co.kr/view/AKR20261120178300079" target="_blank" rel="noopener">韩联社</a></span>
+      </li>
+      <li>
+        <span class="lead">东京上万人集会，反对高市政权修宪与扩军动向。</span>
+        <span class="tag ok">已确认</span>
+        19 日晚，约 1.3 万人聚集在日本国会议事堂前，抗议高市早苗政府"试图修改和平宪法"及一系列安保政策调整。这是近期规模最大的一次同类集会。石破茂同期评论称，高市的高人气部分源于"人们容易被豪言壮语吸引"。抗议规模本身不改变国会席位，但会压缩修宪的公投空间。
+        <span class="src">来源：<a href="http://en.people.cn/n3/2026/1120/c90000-20521398.html" target="_blank" rel="noopener">人民网（新华社）</a>｜<a href="https://news.sina.com.cn/w/2026-11-20/doc-inizkctp0382782.shtml" target="_blank" rel="noopener">新浪新闻</a></span>
+      </li>
+      <li>
+        <span class="lead">法国前总理德维尔潘宣布参加 2027 年总统选举。</span>
+        <span class="tag ok">已确认</span>
+        德维尔潘 20 日在巴黎举行记者会正式宣布参选，称法国面临"多重挑战"，并提出一套以"恢复总统作为国家政治生活仲裁者与引导者角色"为核心的政治纲领。他曾在 2005—2007 年任总理，长期以独立右翼姿态出现。在一个已被极右与中间派挤压的格局里，他的空间取决于能否整合传统右翼的残余选票。
+        <span class="src">来源：<a href="http://english.news.cn/20261120/178477310e5a4b28b8b00f10459154c8/c.html" target="_blank" rel="noopener">Xinhua</a></span>
+      </li>
+      <li>
+        <span class="lead">威特科夫与库什纳在柏林会晤欧洲盟友，泽连斯基要求欧洲全程参与谈判。</span>
+        <span class="tag ok">已确认</span>
+        美方特使威特科夫与库什纳 19 日在柏林参加"意愿联盟"会议，与欧洲盟友讨论乌克兰和平进程的下一步；泽连斯基称已与两人讨论欧洲参与所有谈判的问题，并要求共同准备谈判议程。特朗普方面希望在一月前达成协议。谈判的实质分歧仍集中在领土与安全保障，而非会谈形式。
+        <span class="src">来源：<a href="https://www.antaranews.com/berita/5867399/as-dan-mitra-eropa-bahas-langkah-lanjutan-perdamaian-ukraina" target="_blank" rel="noopener">Antara（引 AFP）</a>｜<a href="https://news-ajel.com/en/world/zylynsky-ytalb-baaadad-gdol-almfaodat-alramy-lanhaaa-alhrb-bshkl-mshtrk" target="_blank" rel="noopener">Ajel</a></span>
+      </li>
+      <li>
+        <span class="lead">特朗普解职白宫国家网络总监 Cairncross。</span>
+        <span class="tag ok">已确认</span>
+        据新华社 20 日汇辑，特朗普解除了白宫国家网络总监 Sean Cairncross 的职务。该职位负责跨部门网络政策的协调，任期通常与政治周期脱钩。在 AI 与关键基础设施安全议题升温的节点换人，短期会削弱白宫在网络议题上的统一发声。
+        <span class="src">来源：<a href="http://english.news.cn/20261120/178477310e5a4b28b8b00f10459154c8/c.html" target="_blank" rel="noopener">Xinhua world news summary</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 中国 -->
+  <section class="card s2">
+    <h2 class="sec"><span class="num">02</span>中国政治<span class="en">CHINA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">习近平在深圳会见阿尔巴尼斯，李强在京举行第十一轮中澳总理年度会晤。</span>
+        <span class="tag ok">官方发布</span>
+        20 日上午，习近平在深圳会见来华出席 APEC 领导人非正式会议的澳大利亚总理阿尔巴尼斯，就深化中澳关系作出"战略指引"。当日下午，李强在钓鱼台国宾馆与阿尔巴尼斯举行第十一轮中澳总理年度会晤，双方共同发表《中澳总理年度会晤联合成果声明》，赵乐际同日会见阿尔巴尼斯。李强提出以明年建交 55 周年为契机，在绿色低碳、新能源汽车、人工智能等领域打造合作亮点，并办好"中澳旅游年"。
+        <span class="src">来源：<a href="https://www.gov.cn/home/toutu/202611/content_7086844.htm" target="_blank" rel="noopener">中国政府网（新华社）</a>｜<a href="https://us.china-embassy.gov.cn/zgyw/202611/t20261120_12064233.htm" target="_blank" rel="noopener">驻美使馆（会晤通稿）</a>｜<a href="https://www.news.cn/20261120/e4607bcc28b84a9584f6a79aba7ea6cf/c.html" target="_blank" rel="noopener">新华网</a></span>
+      </li>
+      <li>
+        <span class="lead">第九届中澳工商界 CEO 圆桌会同期举行，近 30 位企业负责人出席。</span>
+        <span class="tag ok">官方发布</span>
+        20 日晚，李强与阿尔巴尼斯共同出席第九届中澳工商界首席执行官圆桌会，近 30 位中澳商会与企业负责人参加。把 CEO 圆桌放进总理年度会晤的同一日程，说明双方希望把关系修复落到企业订单与投资审批上，而不止于政治表态。
+        <span class="src">来源：<a href="http://rss2.bjd.com.cn/content/s6b006f5be4b039a8e2f3de4a.html" target="_blank" rel="noopener">北京日报（新华社）</a></span>
+      </li>
+      <li>
+        <span class="lead">国家网信办就《实施网络安全标识的产品目录（第二批）》公开征求意见。</span>
+        <span class="tag ok">官方发布</span>
+        11 月 20 日起公开征求意见，反馈截止 12 月 20 日。目录及相关实施规则的作用，是把网络安全标识从原则性要求变成具体产品的准入清单。第二批扩围通常意味着更多网络设备与终端被纳入检测、标识与追溯链条。
+        <span class="src">来源：<a href="https://news.qq.com/rain/a/20261120A0C4AF00" target="_blank" rel="noopener">腾讯新闻（人民财讯）</a></span>
+      </li>
+      <li>
+        <span class="lead">监管辟谣"国常会上有人表态不会再频繁救市"。</span>
+        <span class="tag ok">官方发布</span>
+        资本市场辟谣平台 20 日通报，网传"国常会上有人表态不会再频繁救市了"经核查为谣言，系"编造会议内容、歪曲炒作政策"，并称其严重扰乱资本市场预期。以辟谣而非政策表态回应，本身就是一种预期管理方式。
+        <span class="src">来源：<a href="https://www.ctdsb.net/s540_202611/1665711.html" target="_blank" rel="noopener">楚天都市报（转辟谣平台）</a>｜<a href="http://wxb.jmnews.cn/hlwjbsite/hlwjbsite/detail.html?id=3500" target="_blank" rel="noopener">资本市场辟谣平台</a></span>
+      </li>
+      <li>
+        <span class="lead">国务院令第 848 号：修改和废止部分行政法规。</span>
+        <span class="tag ok">官方发布</span>
+        20 日出版的《国务院公报》第 32 期刊登第 848 号国务院令，对部分行政法规作出修改与废止。此类批量修订多为与上位法衔接、清理重复许可的技术性动作，但涉及的具体领域仍值得逐条比对。
+        <span class="src">来源：<a href="https://english.www.gov.cn/archive/statecouncilgazette/202611/20/content_WS6b000cacc6d00ca5f9a0e819.html" target="_blank" rel="noopener">State Council Gazette</a></span>
+      </li>
+    </ul>
+
+    <div class="signal">
+      <h3>政策信号解读</h3>
+      <div class="sig-item">
+        <span class="k">① 中澳关系进入"成果清单"阶段，看点在执行而非文本。</span>
+        联合成果声明、CEO 圆桌、旅游年、55 周年，这套组合说明双方已从"止跌"转向"做增量"。真正需要跟踪的是：澳方对中资投资的审查口径是否松动、中方对澳农产品的检疫与关税安排是否落地。若只有声明没有清单，象征意义会大于实际。
+      </div>
+      <div class="sig-item">
+        <span class="k">② 网络安全标识目录第二批，是合规成本向供应链前移。</span>
+        标识制度把安全责任从"出事之后追责"改为"入市之前检测"。对国内厂商是认证成本，对外资产品是准入不确定性。第二批目录的品类选择，往往预示下一阶段监管的重点场景（如车联网、工业控制、智能终端）。
+      </div>
+      <div class="sig-item">
+        <span class="k">③ 用辟谣管理预期，说明"稳市"仍是底线但工具偏谨慎。</span>
+        在全球风险资产回调、A 股情绪敏感的时点，"不会再救市"这类传言最容易被放大。选择由辟谣平台出面而非监管层直接表态，既划了红线，又避免给出新的政策承诺——这是一种留有退路的处理方式。
+      </div>
+      <p class="note">以上为分析判断，非官方表述；①③含推论，②为已发布信息与制度逻辑的解读。</p>
+    </div>
+  </section>
+
+  <!-- 3 澳洲 -->
+  <section class="card s3">
+    <h2 class="sec"><span class="num">03</span>澳洲新闻<span class="en">AUSTRALIA</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">悉尼反恐突袭：一名男子被控持有恐怖主义相关材料，另有两人被拘。</span>
+        <span class="tag ok">已确认</span>
+        20 日凌晨，新州联合反恐小组（AFP、NSW 警方与 ASIO）在悉尼西南与西北多处展开突袭，在 Ingleburn 逮捕一名 35 岁男子，指其研究如何制作汽车炸弹并持有恐怖主义相关材料，另两人被拘。行动为一起持续六个月的调查收尾，男子当日在地方法院出庭。
+        <span class="src">来源：<a href="https://www.afp.gov.au/news-centre/media-release/nsw-jctt-charge-man-allegedly-possessing-terrorism-related-material-two" target="_blank" rel="noopener">AFP</a>｜<a href="https://www.thenewdaily.com.au/news/crime-news/2026/11/20/counter-terrorism-raids" target="_blank" rel="noopener">The New Daily</a>｜<a href="https://www.police.nsw.gov.au/news/news_article?sq_content_src=%2BdXJsPWh0dHBzJTNBJTJGJTJGZWJpenByZC5wb2xpY2UubnN3Lmdvdi5hdSUyRm1lZGlhJTJGMTI5ODI2Lmh0bWwmYWxsPTE%3D" target="_blank" rel="noopener">NSW Police</a></span>
+      </li>
+      <li>
+        <span class="lead">维州大选一周倒计时：联盟党两党偏好领先 10 个百分点。</span>
+        <span class="tag ok">已确认</span>
+        11 月 28 日投票。Newspoll（Pyxis）显示联盟党以 55 比 45 领先，工党初选票 24%、联盟党 33%，One Nation 约 20%；反对党领袖 Jess Wilson 在"首选州长"上领先州长 Carroll。ABC 分析称工党选情已从"糟糕"转向"灾难性"。若趋势不变，工党 12 年执政将面临终结。
+        <span class="src">来源：<a href="https://www.news24.com.au/politics/australian-politics/newspoll-puts-coalition-10-points-ahead-with-jess-wilson-leading-ben-carroll-as-preferred-premier/news-story/5e857bca3ad8fb29d0d888b1697da1a6" target="_blank" rel="noopener">News24（Newspoll）</a>｜<a href="https://newsapp.abc.net.au/news/2026-11-18/victorian-election-casey-briggs-analysis-state-of-play/107393822" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">维州周五再发严重雷暴警告，北部与东北部有山洪风险。</span>
+        <span class="tag ok">已确认</span>
+        截至周五 17 时（AEDT），维州部分地区、新州西部与昆州仍处于严重雷暴警告之下；截至周六 23 时的 72 小时累计降雨预报显示，维州北部与新州南部存在洪水风险。此轮天气是同一低压系统在东澳的延续。
+        <span class="src">来源：<a href="https://eldersweather.com.au/news/severe-thunderstorm-warnings-issued-across-three-states-as-volatile-weather-continues/1891664" target="_blank" rel="noopener">Elders Weather</a>｜<a href="https://eldersweather.com.au/news/warm-humid-air-building-ahead-of-widespread-rain-and-thunderstorms-across-eastern-australia/1891662" target="_blank" rel="noopener">Elders（降雨预报）</a></span>
+      </li>
+      <li>
+        <span class="lead">爱丽斯泉 NBN 断网被指与南澳风暴相关。</span>
+        <span class="tag ok">已确认</span>
+        ABC 中澳本地简报称，中部澳大利亚的 NBN 中断与本周南澳风暴有关。这条链路暴露的是全国性网络对单点长途骨干的依赖：南澳两座输电塔倒塌，远端用户却先感到断网。
+        <span class="src">来源：<a href="https://www.abc.net.au/news/2026-11-20/alice-springs-and-katherine-local-news-briefing/107407790" target="_blank" rel="noopener">ABC News</a></span>
+      </li>
+      <li>
+        <span class="lead">17 岁少年因"Onepercent"账号被捕，涉酒吧纵火与勒索。</span>
+        <span class="tag ok">已确认</span>
+        警方此前就网络用户名"Onepercent"公开征集线索，该账号被认为与多起针对餐饮场所的纵火、勒索与暴力袭击有关；一名 17 岁少年随后被捕。案件把"线上匿名接单、线下实施"的犯罪模式推到台面。
+        <span class="src">来源：<a href="https://19news.au/news/17-year-old-arrested-over-melbourne-firebombings-and-extortion-attacks-p6s-rqkxhabtsht3jkl--p6s-rqkxhabtsht3jkl/" target="_blank" rel="noopener">19News.au</a>｜<a href="https://www.centralwesterndaily.com.au/story/9395648/teen-arrested-after-search-for-online-crime-taskmaster/" target="_blank" rel="noopener">Central Western Daily（AAP）</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 墨尔本 -->
+  <section class="card s4">
+    <h2 class="sec"><span class="num">04</span>墨尔本新闻<span class="en">MELBOURNE</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">周末天气：周六约 25°C、上午有阵雨，周日升至约 30°C 并可能强雷暴。</span>
+        <span class="tag ok">已确认</span>
+        气象局对墨尔本地区的预报为：周六最低约 17°C，上午与午后有中等概率阵雨，其余时间多云，最高约 25°C。周日气温升至约 30°C，可能出现严重雷暴，伴破坏性大风与大型冰雹。周六适合安排户外，但雨具仍建议随身。
+        <span class="src">来源：<a href="https://www.nine.com.au/australia-news/australia-weather-forecast-saturday-storms-rain-20261121-p61g3x.html" target="_blank" rel="noopener">9News</a>｜<a href="https://www.bom.gov.au/places/vic/strathmore/forecast/" target="_blank" rel="noopener">Bureau of Meteorology</a></span>
+      </li>
+      <li>
+        <span class="lead">州长 Carroll 在西北郊区走访，自称面对一场"可以赢"的选举。</span>
+        <span class="tag ok">已确认</span>
+        投票日前一周，Carroll 在墨尔本西北的传统工党腹地会见居民，当地选民对生活成本与治安的不满明显。他公开表示这是一场"可以赢"的选举，试图把叙事从民调拉回地方议题。工党要守住的是边缘席位，而不是全州总数。
+        <span class="src">来源：<a href="https://www.goulburnpost.com.au/story/9395684/embattled-premier-upbeat-before-winnable-election/" target="_blank" rel="noopener">Goulburn Post（AAP）</a></span>
+      </li>
+      <li>
+        <span class="lead">Epping 凌晨 1 点飙车聚会，视频被比作"GTA 场景"。</span>
+        <span class="tag ok">已确认</span>
+        社交媒体流传的视频显示，至少六辆车在 Epping 的 Ricky Way 与 Northpoint Drive 交叉口聚集，乘客把身体探出车窗，车辆做危险特技。警方称相关行为正在调查。这类"工业区深夜聚会"已成为墨尔本北郊的常态性治安投诉。
+        <span class="src">来源：<a href="https://www.news.com.au/technology/motoring/on-the-road/going-crazy-gta-scenes-as-hoons-takeover-melbourne-industrial-streets/news-story/068ce7ae541e64612dbd05adc045902b" target="_blank" rel="noopener">news.com.au</a></span>
+      </li>
+      <li>
+        <span class="lead">Port Melbourne 居民请愿整治飙车，称 20 日有居民遭威胁。</span>
+        <span class="tag ok">已确认</span>
+        Port Phillip 市议会收到关于"危险飙车、噪音与有毒尾气"的请愿，重点区域包括 Station Pier；请愿文件记载 11 月 20 日一名居民被飙车者威胁或袭击。地方议会能做的有限（减速带、限时停车），执法仍依赖警方。
+        <span class="src">来源：<a href="https://www.portphillip.vic.gov.au/media/qzfmnbss/report-7-1-petition-hoon-driving-excessive-noise-and-toxic-fumes-accross-port-melbourne.pdf" target="_blank" rel="noopener">Port Phillip 市议会文件</a></span>
+      </li>
+      <li>
+        <span class="lead">"白天街头疑似吸毒"视频引爆治安争论。</span>
+        <span class="tag tbd">待确认</span>
+        有视频称一名几乎赤裸的男子白天在墨尔本人行道上疑似吸食冰毒，引发对维州公共吸毒与保释政策的批评。视频真实性、拍摄时间与地点均未获官方确认，仅可作为舆论情绪的观察样本，不宜当作事实引用。
+        <span class="src">来源：<a href="https://newshunt.io/news/110035980107731/daily-mail-welcome-to-melbourne-in-2026-man-smokes-meth-in-broad-daylight-as-critics-claim-law-change-lets-druggies-get-away-with-it-014e1ca82ec05a68" target="_blank" rel="noopener">Daily Mail（转引）</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5 科技 -->
+  <section class="card s5">
+    <h2 class="sec"><span class="num">05</span>科技与 AI<span class="en">TECH</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">Anthropic 上市首日收 97.17 美元（+17.1%），周五首个完整交易日跌近一成。</span>
+        <span class="tag ok">已确认</span>
+        发行价 83 美元，开盘 111.50 美元（+34%），首日收 97.17 美元，市值约 1.3 万亿美元（完全稀释约 1.75 万亿），为史上最大 IPO。周五股价回落近 10%，部分回吐首日涨幅。巨型 IPO 与 AI 估值担忧同时发生，是这一轮周期的标志性画面。
+        <span class="src">来源：<a href="https://en.infomaxai.com/news/articleView.html?idxno=149414" target="_blank" rel="noopener">Yonhap Infomax</a>｜<a href="https://www.malaymail.com/amp/news/money/2026/11/20/defying-bubble-panic-and-spy-scandals-anthropic-pulls-off-a-historic-us175t-debut/243990" target="_blank" rel="noopener">Malay Mail</a>｜<a href="https://tradingeconomics.com/united-states/stock-market/news/603218" target="_blank" rel="noopener">Trading Economics</a></span>
+      </li>
+      <li>
+        <span class="lead">AI 硬件全线杀跌：英伟达 -6.9%、博通 -8.9%、AMD -9.6%、美光 -11.1%。</span>
+        <span class="tag ok">已确认</span>
+        周五美股 AI 产业链普跌，费城半导体相关标的重挫；资金转向消费必需品与医疗等防御板块。触发因素是"估值过高 + 融资成本上升"的再定价，而不是订单数据恶化。这类下跌通常先杀估值、后看财报验证。
+        <span class="src">来源：<a href="https://tradingeconomics.com/united-states/stock-market/news/603218" target="_blank" rel="noopener">Trading Economics</a></span>
+      </li>
+      <li>
+        <span class="lead">SpaceX 新发 320 亿美元债务，以偏高收益率才完成认购。</span>
+        <span class="tag ok">已确认</span>
+        这笔大规模发债在高利率环境下以陡峭收益率定价，被市场视为"AI/航天资本开支融资成本上升"的信号。当最头部的私营科技公司都需要付出溢价融资，二线企业的融资窗口会更窄。
+        <span class="src">来源：<a href="https://tradingeconomics.com/united-states/stock-market/news/603218" target="_blank" rel="noopener">Trading Economics</a></span>
+      </li>
+      <li>
+        <span class="lead">Gemini 的 macOS 应用开始可以"操作 Mac"。</span>
+        <span class="tag ok">已确认</span>
+        谷歌为 Gemini 桌面端加入控制原生 Mac 应用与浏览网页的能力，从"对话助手"转向"可执行任务的代理"。这与本周各家把 Agent 能力嵌入操作系统的方向一致，也把权限与审计问题推到用户面前。
+        <span class="src">来源：<a href="https://aitoolsrecap.com/Blog/ai-news-november-20-2026" target="_blank" rel="noopener">AI Tools Recap</a></span>
+      </li>
+      <li>
+        <span class="lead">中国新增 34 家"领航级智能工厂"。</span>
+        <span class="tag ok">官方发布</span>
+        央视 20 日报道，中国新增 34 家领航级智能工厂。这是智能制造梯度培育体系中的最高一档，评选指向的是可复制的产线方案而非单点示范。对设备与工业软件厂商而言，名单即是下一轮订单的方向标。
+        <span class="src">来源：<a href="https://tv.cctv.cn/2026/11/20/VIDE7KiLhQ9TBWg3fbCB1k1f261120.shtml" target="_blank" rel="noopener">央视《中国新闻》</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6 经济 -->
+  <section class="card s6">
+    <h2 class="sec"><span class="num">06</span>世界经济<span class="en">ECONOMY</span></h2>
+    <ul class="news">
+      <li>
+        <span class="lead">ASX 200 收 8,592.60（-1.58%），七连跌、全周跌约 490 点，为疫情以来最差一周。</span>
+        <span class="tag ok">已确认</span>
+        周五下跌 137.80 点，所有板块收跌，Small Ords 跌 2.71%。周线约 -490 点，是 2020 年 3 月以来最差的单周表现。权重集中在矿业与银行的结构，使其在全球科技股回调时几乎没有缓冲。
+        <span class="src">来源：<a href="https://www.news.com.au/finance/markets/australian-markets/australian-shares-tumble-for-seventh-consecutive-session-amid-global-tech-rout-and-jobs-data/news-story/94eea99c779ba81b0337147d13add147" target="_blank" rel="noopener">news.com.au</a>｜<a href="https://stockhead.com.au/news/closing-bell-seven-straight-asx-losses-tech-soils-the-bed-and-were-off-to-the-pub-bye/" target="_blank" rel="noopener">Stockhead</a>｜<a href="https://www.marketindex.com.au/news/evening-wrap-asx-200-cops-a-490-point-weekly-drubbing-as-ai-trade-unwind" target="_blank" rel="noopener">Market Index</a></span>
+      </li>
+      <li>
+        <span class="lead">美股周五续跌：标普 -1.6%（六连跌、逾六个月新低），纳指 -2.9%。</span>
+        <span class="tag ok">已确认</span>
+        标普 500 连续第六个交易日下跌，纳指跌幅更大，道指跌幅明显较小。全周纳指与道指跌近 6%、标普跌约 5%。领涨的算力股成为提款机，防御板块（消费必需品、医疗）逆势走强，是典型的"去风险"轮动。
+        <span class="src">来源：<a href="https://tradingeconomics.com/united-states/stock-market/news/603218" target="_blank" rel="noopener">Trading Economics</a></span>
+      </li>
+      <li>
+        <span class="lead">黄金单日跌约 2.7% 至 3,527 美元，创 3 月以来最大周跌幅。</span>
+        <span class="tag ok">已确认</span>
+        现货金周五一度跌至 3,527 美元/盎司附近，前一日还在 3,626 美元上方；周线为 3 月以来最差。避险资产与风险资产同跌，通常指向流动性需求（补保证金）而非单纯的避险情绪消退。
+        <span class="src">来源：<a href="https://www.finanzen.at/nachrichten/rohstoffe/goldpreis-oelpreis-silberpreis-&amp;-co-so-schlagen-sich-die-rohstoffe-am-abend-1036789152" target="_blank" rel="noopener">finanzen.at</a>｜<a href="https://www.moneycontrol.com/news/business/stocks/commodity-corner-oil-edges-higher-gold-heads-for-biggest-weekly-fall-since-march-14085267.html" target="_blank" rel="noopener">Moneycontrol</a></span>
+      </li>
+      <li>
+        <span class="lead">原油小涨：布伦特 92.65 美元、WTI 83.09 美元，但全周布伦特跌约 4%。</span>
+        <span class="tag ok">已确认</span>
+        周五布伦特涨 0.74%、WTI 涨 0.79%，市场担心美国可能再次打击伊朗。但周线仍跌约 4%，说明供给过剩的预期压过了地缘溢价。油价的方向取决于"制裁执行"与"OPEC+ 增产"哪个先落地。
+        <span class="src">来源：<a href="https://in.investing.com/news/stock-market-news/indian-stocks-open-lower-as-gold-slides-and-oil-prices-rise-5716742" target="_blank" rel="noopener">Investing.com</a>｜<a href="https://www.moneycontrol.com/news/business/stocks/commodity-corner-oil-edges-higher-gold-heads-for-biggest-weekly-fall-since-march-14085267.html" target="_blank" rel="noopener">Moneycontrol</a></span>
+      </li>
+      <li>
+        <span class="lead">铁矿石从四年低位反弹：62% 澳粉 90.9 美元/干吨，DCE 主力 652.5 元。</span>
+        <span class="tag ok">已确认</span>
+        Mysteel 口径下，11 月 20 日澳洲粉矿 62% 报 90.9 美元/干吨，环比涨 0.05 美元；大商所主力合约收 652.5 元/吨（+0.69%），从四年低位回升，动力是钢厂年末补库预期。现货 Fe61% 仍在 89 美元/干吨附近，反弹的持续性取决于钢材需求而非补库本身。
+        <span class="src">来源：<a href="https://tks.mysteel.com/jkk/m/26112019/5F085BCD6E135884.html" target="_blank" rel="noopener">Mysteel</a>｜<a href="https://tradingeconomics.com/commodity/iron-ore-cny/news/603016" target="_blank" rel="noopener">Trading Economics</a></span>
+      </li>
+    </ul>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>指标</th><th>最新 / 方向</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ASX 200</td>
+            <td class="num">8,592.60</td>
+            <td>-1.58%，七连跌<span class="sub">全周约 -490 点，疫情以来最差</span></td>
+          </tr>
+          <tr>
+            <td>标普 500</td>
+            <td class="num">-1.6%</td>
+            <td>六连跌<span class="sub">逾六个月新低；纳指 -2.9%</span></td>
+          </tr>
+          <tr>
+            <td>黄金</td>
+            <td class="num">3,527 美元/盎司</td>
+            <td>单日约 -2.7%<span class="sub">3 月以来最大周跌幅</span></td>
+          </tr>
+          <tr>
+            <td>布伦特原油</td>
+            <td class="num">92.65 美元/桶</td>
+            <td>+0.74%<span class="sub">全周约 -4%</span></td>
+          </tr>
+          <tr>
+            <td>铁矿石（62% 澳粉）</td>
+            <td class="num">90.9 美元/干吨</td>
+            <td>+0.05 美元<span class="sub">DCE 主力 652.5 元，+0.69%</span></td>
+          </tr>
+          <tr>
+            <td>Anthropic 首日收盘</td>
+            <td class="num">97.17 美元</td>
+            <td>+17.1%<span class="sub">发行价 83 美元，市值约 1.3 万亿</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="watch">
+    <h2>明日关注</h2>
+    <ul>
+      <li>维州大选最后一周：提前投票率，以及 Niddrie、Prahran 等边缘席位的偏好票流向。</li>
+      <li>墨尔本周日约 30°C 与强雷暴：破坏性大风、冰雹与短时积水。</li>
+      <li>中澳联合成果声明的落实清单：旅游年安排、农产品检疫与投资审查口径。</li>
+      <li>美股 AI 板块能否止血；Anthropic 的限售解禁与指数纳入节奏。</li>
+      <li>胡塞对沙特港口与航路的威胁是否兑现，荷台达港撤离的后续。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>本期基于公开报道整理，链接指向原始来源。标注“传闻 / 未官宣”的信息未经官方确认，“待确认”表示数字或细节尚缺一手来源。</p>
+    <p>中国政治板块的“政策信号解读”为分析判断，不代表官方立场。本简报仅供信息参考，不构成投资建议。</p>
+    <p>生成时间：2026-11-21 10:15 AEDT · 覆盖 11 月 20 日—21 日晨间 · 第 11 期</p>
+    <p style="margin-top:10px"><a href="./index.html">← 返回全部简报</a> · <a href="./archive.html">查看归档</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
